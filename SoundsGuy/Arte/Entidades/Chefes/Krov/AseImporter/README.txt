@@ -1,0 +1,1 @@
+Coloque os arquivos do asesprite aqui, ai é só colocar o arquivo .ase na cena do personagem
