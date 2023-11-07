@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://chl5goyt0g4bc"]
+
+[ext_resource type="PackedScene" uid="uid://dvot5ab3elm2p" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase" id="1_h0aom"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgvmr"]
+size = Vector2(26, 32)
+
+[node name="Herus" type="Node2D"]
+
+[node name="Protagonista" parent="." instance=ExtResource("1_h0aom")]
+region_rect = Rect2(0, 0, 31, 32)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_fgvmr")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3.5, 3.5)

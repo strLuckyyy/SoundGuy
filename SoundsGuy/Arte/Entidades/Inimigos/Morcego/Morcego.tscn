@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcxr6tu00rgus"]
+
+[ext_resource type="PackedScene" uid="uid://cg1ovsnxi0rkl" path="res://Arte/Entidades/Inimigos/Morcego/AseImporter/Morcego.ase" id="1_nbl40"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iiskq"]
+size = Vector2(30, 10)
+
+[node name="Morcego" type="Node2D"]
+
+[node name="Morcego" parent="." instance=ExtResource("1_nbl40")]
+frame = 1
+frame_progress = 0.966808
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_iiskq")

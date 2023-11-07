@@ -13,6 +13,15 @@ config_version=5
 config/name="SoundsGuy"
 config/features=PackedStringArray("4.1", "Mobile")
 
+[aseprite_importers]
+
+aseprite_executable_path="C:/Users/abraa/Downloads/LibreSprite-Windows-x86_64/libresprite.exe"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/nklbdev.aseprite_importers/plugin.cfg")
+
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bne7strr8m0v5"]
+
+[ext_resource type="PackedScene" uid="uid://da6l78avjtq7f" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase" id="1_iu4fi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2hme"]
+size = Vector2(28, 32)
+
+[node name="Krov" type="Node2D"]
+scale = Vector2(2, 2)
+
+[node name="Vampiro" parent="." instance=ExtResource("1_iu4fi")]
+animation = &"front view"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_g2hme")
