@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://brgagtos676tt"]
+
+[ext_resource type="PackedScene" uid="uid://dvot5ab3elm2p" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase" id="1_veg8f"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jjhiq"]
+animation = &"walking_l"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1hosw"]
+animation = &"Walking_r"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_f7xt1"]
+animation = &"Walking_b"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ef6tt"]
+animation = &"walking_f"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_0f5ub"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_jjhiq")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_1hosw")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_f7xt1")
+blend_point_2/pos = Vector2(0, -1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_ef6tt")
+blend_point_3/pos = Vector2(0, 1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_2iewu"]
+states/Start/position = Vector2(193.333, 99.8518)
+states/move/node = SubResource("AnimationNodeBlendSpace2D_0f5ub")
+states/move/position = Vector2(362.667, 99.4815)
+
+[node name="Protagonista" instance=ExtResource("1_veg8f")]
+offset = Vector2(-1, 0)
+region_rect = Rect2(90, 0, 28, 32)
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="1"]
+tree_root = SubResource("AnimationNodeStateMachine_2iewu")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/move/blend_position = Vector2(-0.029987, 0.542105)
