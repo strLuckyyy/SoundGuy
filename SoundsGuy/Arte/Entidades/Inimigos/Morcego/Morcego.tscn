@@ -1,90 +1,59 @@
-[gd_scene load_steps=11 format=3 uid="uid://dcxr6tu00rgus"]
+[gd_scene load_steps=9 format=3 uid="uid://dcxr6tu00rgus"]
 
-[ext_resource type="Texture2D" uid="uid://b1f3uoi8um2l4" path="res://Arte/Entidades/Inimigos/Morcego/AseImporter/Morcego.png" id="1_a8qv1"]
+[ext_resource type="Texture2D" uid="uid://cbanxk8otnupa" path="res://Arte/Entidades/Inimigos/Morcego/AseImporter/Morcego.ase1.png" id="2_0vjpl"]
+[ext_resource type="Script" path="res://Arte/Entidades/Inimigos/Morcego/bat.gd" id="2_t86er"]
+[ext_resource type="Texture2D" uid="uid://xht0tme4s2th" path="res://Arte/Entidades/Inimigos/Morcego/AseImporter/Morcego.ase2.png" id="3_j8jmd"]
+[ext_resource type="Texture2D" uid="uid://xmdbnu4s4yrd" path="res://Arte/Entidades/Inimigos/Morcego/AseImporter/Morcego.ase3.png" id="4_xtfr8"]
+[ext_resource type="Texture2D" uid="uid://d361faq6py8sv" path="res://Arte/Entidades/Inimigos/Morcego/AseImporter/Morcego.ase4.png" id="5_dl5g4"]
+[ext_resource type="Texture2D" uid="uid://8cmjvw1eejol" path="res://Arte/Entidades/Inimigos/Morcego/AseImporter/Morcego.ase5.png" id="6_ceula"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dxiyg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0vjpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j8jmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xtfr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dl5g4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ceula")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iiskq"]
-size = Vector2(30, 10)
-
-[sub_resource type="Animation" id="Animation_e7ibp"]
-length = 0.43
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:offset")
-tracks/0/interp = 0
-tracks/0/loop_wrap = false
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.3, 0.35),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [Vector2(0, -3), Vector2(0, -5), Vector2(0, -3), Vector2(0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:region_rect")
-tracks/1/interp = 0
-tracks/1/loop_wrap = false
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.35),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [Rect2i(0, 28, 30, 7), Rect2i(26, 16, 30, 12), Rect2i(0, 0, 26, 17), Rect2i(0, 17, 26, 11), Rect2i(26, 0, 26, 16)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_c6d8u"]
-_data = {
-"move": SubResource("Animation_e7ibp")
-}
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_go6hv"]
-animation = &"move"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bvwkl"]
-animation = &"move"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7wnqg"]
-animation = &"move"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p85q6"]
-animation = &"move"
-
-[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_wnaot"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_go6hv")
-blend_point_0/pos = Vector2(-1, 0)
-blend_point_1/node = SubResource("AnimationNodeAnimation_bvwkl")
-blend_point_1/pos = Vector2(0, 1)
-blend_point_2/node = SubResource("AnimationNodeAnimation_7wnqg")
-blend_point_2/pos = Vector2(1, 0)
-blend_point_3/node = SubResource("AnimationNodeAnimation_p85q6")
-blend_point_3/pos = Vector2(0, -1)
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_1fmxa"]
-states/move/node = SubResource("AnimationNodeBlendSpace2D_wnaot")
-states/move/position = Vector2(474.667, 98.8889)
+size = Vector2(22, 8)
 
 [node name="Morcego" type="Node2D"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_t86er")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1, -1)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+light_mask = 8
+visibility_layer = 8
+sprite_frames = SubResource("SpriteFrames_dxiyg")
+animation = &"idle"
+frame_progress = 0.965961
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+position = Vector2(26, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(-26, -10)
 shape = SubResource("RectangleShape2D_iiskq")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_a8qv1")
-offset = Vector2(0, -5)
-region_enabled = true
-region_rect = Rect2(26, 16, 30, 12)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_iiskq")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
-libraries = {
-"": SubResource("AnimationLibrary_c6d8u")
-}
-
-[node name="AnimationTree" type="AnimationTree" parent="Sprite2D"]
-tree_root = SubResource("AnimationNodeStateMachine_1fmxa")
-anim_player = NodePath("../AnimationPlayer")
-active = true
-parameters/move/blend_position = Vector2(0, 0)
+[connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]

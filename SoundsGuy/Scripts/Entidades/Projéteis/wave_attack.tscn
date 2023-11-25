@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://21mx8sno1q8q"]
+
+[ext_resource type="Texture2D" uid="uid://drvosuefgv7rg" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase23.png" id="1_u6qoc"]
+[ext_resource type="Texture2D" uid="uid://0fara0fe4cqk" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase24.png" id="2_x0k7s"]
+[ext_resource type="Texture2D" uid="uid://dwfgjxvwsv3vr" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase25.png" id="3_wlagt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3jjwd"]
+size = Vector2(26, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fbpcc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_u6qoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_x0k7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wlagt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 2)
+shape = SubResource("RectangleShape2D_3jjwd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fbpcc")
+frame = 2
+frame_progress = 0.334721
