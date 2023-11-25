@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dm1syv1hx40rs"]
+[gd_scene load_steps=44 format=3 uid="uid://dm1syv1hx40rs"]
 
 [ext_resource type="Texture2D" uid="uid://dfseonrlot3iw" path="res://Arte/Mapa/beach_expansion_v1.0/beach_expansion_v1.0/beach_tiles.png" id="1_ju5gg"]
 [ext_resource type="Texture2D" uid="uid://bakifk7tv3vpn" path="res://Arte/Mapa/beach_expansion_v1.0/beach_expansion_v1.0/assets.png" id="2_3iskp"]
@@ -13,13 +13,15 @@
 [ext_resource type="Texture2D" uid="uid://3r4372k6ecm3" path="res://Arte/Mapa/PixiVan Forest (Beta)/Ground Tileset.png" id="11_hq4ut"]
 [ext_resource type="Texture2D" uid="uid://cc8nmbfw8sc26" path="res://Arte/Mapa/PixiVan Forest (Beta)/Cliff.png" id="12_6w1kl"]
 [ext_resource type="Texture2D" uid="uid://bwn0ldl2r3iyh" path="res://Arte/Mapa/MiniTileset-Dungeon/Dungeon.png" id="13_ajycj"]
+[ext_resource type="PackedScene" uid="uid://chl5goyt0g4bc" path="res://Arte/Entidades/Personagens/Player/Herus.tscn" id="13_reook"]
 [ext_resource type="Texture2D" uid="uid://bc5iggnchttb0" path="res://Arte/Mapa/Pixel Art Top Down - Basic/Texture/TX Struct.png" id="14_u4flr"]
 [ext_resource type="Texture2D" uid="uid://dyesmen6g2wy8" path="res://Arte/Mapa/Pixel Art Top Down - Basic/Texture/TX Tileset Stone Ground.png" id="15_eerij"]
 [ext_resource type="Texture2D" uid="uid://j46gdoomqym1" path="res://Arte/Mapa/Pixel Art Top Down - Basic/Texture/TX Tileset Wall.png" id="16_s5n0m"]
 [ext_resource type="Texture2D" uid="uid://biqpund46wmad" path="res://Arte/Entidades/Personagens/Screenshot 2023-11-24 143649.png" id="18_3j270"]
-[ext_resource type="PackedScene" uid="uid://bt0rso7yt0ohf" path="res://Scripts/Entidades/Personagens/Player Scripts/herus.tscn" id="18_x71e2"]
+[ext_resource type="Script" path="res://Arte/Entidades/Personagens/Player/Herus.gd" id="18_32uio"]
 [ext_resource type="PackedScene" uid="uid://dcxr6tu00rgus" path="res://Arte/Entidades/Inimigos/Morcego/Morcego.tscn" id="19_0hjm1"]
 [ext_resource type="PackedScene" uid="uid://bne7strr8m0v5" path="res://Arte/Entidades/Chefes/Krov/Krov.tscn" id="20_sy5f3"]
+[ext_resource type="Script" path="res://Arte/Entidades/Inimigos/Morcego/Morcego.gd" id="21_klkpm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ssgfc"]
 texture = ExtResource("1_ju5gg")
@@ -11699,7 +11701,6 @@ sources/8 = SubResource("TileSetAtlasSource_iewyl")
 sources/9 = SubResource("TileSetAtlasSource_t4gax")
 
 [node name="Cena Teste" type="Node2D"]
-position = Vector2(-59, -48)
 
 [node name="Tilesets" type="Node2D" parent="."]
 
@@ -11862,36 +11863,73 @@ layer_7/tile_data = PackedInt32Array(4718607, 1703939, 8, 4784143, 1703939, 9, 4
 
 [node name="Personagens" type="Node2D" parent="."]
 
+[node name="Herus" parent="Personagens" instance=ExtResource("13_reook")]
+position = Vector2(275, 1364)
+script = ExtResource("18_32uio")
+
 [node name="Caronte" type="Sprite2D" parent="Personagens"]
 position = Vector2(67, -15)
 scale = Vector2(0.17, 0.17)
 texture = ExtResource("18_3j270")
 
-[node name="Herus" parent="Personagens" instance=ExtResource("18_x71e2")]
-
 [node name="Inimigos" type="Node2D" parent="."]
-position = Vector2(-28, -23)
 
 [node name="Morcego" parent="Inimigos" instance=ExtResource("19_0hjm1")]
-position = Vector2(193, 190)
+position = Vector2(240, 243)
+script = ExtResource("21_klkpm")
 
 [node name="Morcego2" parent="Inimigos" instance=ExtResource("19_0hjm1")]
-position = Vector2(255, 716)
+position = Vector2(123, 277)
 
 [node name="Morcego3" parent="Inimigos" instance=ExtResource("19_0hjm1")]
-position = Vector2(246, 603)
+position = Vector2(304, 313)
 
 [node name="Morcego4" parent="Inimigos" instance=ExtResource("19_0hjm1")]
-position = Vector2(287, 458)
+position = Vector2(340, 353)
 
 [node name="Morcego5" parent="Inimigos" instance=ExtResource("19_0hjm1")]
-position = Vector2(200, 365)
+position = Vector2(138, 379)
 
 [node name="Morcego6" parent="Inimigos" instance=ExtResource("19_0hjm1")]
-position = Vector2(250, 276)
+position = Vector2(171, 482)
+
+[node name="Morcego7" parent="Inimigos" instance=ExtResource("19_0hjm1")]
+position = Vector2(282, 484)
+
+[node name="Morcego8" parent="Inimigos" instance=ExtResource("19_0hjm1")]
+position = Vector2(311, 644)
+
+[node name="Morcego9" parent="Inimigos" instance=ExtResource("19_0hjm1")]
+position = Vector2(401, 472)
+
+[node name="Morcego10" parent="Inimigos" instance=ExtResource("19_0hjm1")]
+position = Vector2(115, 577)
+
+[node name="Morcego11" parent="Inimigos" instance=ExtResource("19_0hjm1")]
+position = Vector2(107, 722)
+
+[node name="Morcego12" parent="Inimigos" instance=ExtResource("19_0hjm1")]
+position = Vector2(350, 852)
+
+[node name="Morcego13" parent="Inimigos" instance=ExtResource("19_0hjm1")]
+position = Vector2(148, 920)
+
+[node name="Morcego14" parent="Inimigos" instance=ExtResource("19_0hjm1")]
+position = Vector2(346, 952)
+
+[node name="Morcego15" parent="Inimigos" instance=ExtResource("19_0hjm1")]
+position = Vector2(234, 827)
+
+[node name="Morcego16" parent="Inimigos" instance=ExtResource("19_0hjm1")]
+position = Vector2(186, 1057)
+
+[node name="Morcego17" parent="Inimigos" instance=ExtResource("19_0hjm1")]
+position = Vector2(409, 1115)
+
+[node name="Morcego18" parent="Inimigos" instance=ExtResource("19_0hjm1")]
+position = Vector2(281, 189)
 
 [node name="Objetos" type="Node2D" parent="."]
-position = Vector2(-134, -22)
 
 [node name="Moeda" type="Sprite2D" parent="Objetos"]
 z_index = 1
@@ -11901,7 +11939,6 @@ region_enabled = true
 region_rect = Rect2(77, 687, 4, 4)
 
 [node name="Boss" type="Node2D" parent="."]
-position = Vector2(-121, -29)
 
 [node name="Krov" parent="Boss" instance=ExtResource("20_sy5f3")]
 position = Vector2(274, 1453)

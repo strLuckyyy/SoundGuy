@@ -211,19 +211,16 @@ animations = [{
 "speed": 6.0
 }]
 
-[node name="Herus" type="Node2D"]
+[node name="Herus" type="Node2D" groups=["Player"]]
 
 [node name="Herus" type="CharacterBody2D" parent="."]
 collision_layer = 2
-collision_mask = 3
+collision_mask = 2
 motion_mode = 1
 script = ExtResource("1_w5ijm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Herus"]
 shape = SubResource("CapsuleShape2D_77dn0")
-
-[node name="Camera2D" type="Camera2D" parent="Herus"]
-zoom = Vector2(4.5, 4.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Herus"]
 position = Vector2(1, 0)
@@ -232,6 +229,8 @@ animation = &"attack"
 autoplay = "idleDown"
 
 [node name="Wave" type="Area2D" parent="Herus"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("24_gml62")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Herus/Wave"]
@@ -241,8 +240,8 @@ disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Herus/Wave"]
 visible = false
-light_mask = 16
-visibility_layer = 16
+light_mask = 2
+visibility_layer = 2
 position = Vector2(2, 29)
 sprite_frames = SubResource("SpriteFrames_igpkv")
 animation = &"blast"

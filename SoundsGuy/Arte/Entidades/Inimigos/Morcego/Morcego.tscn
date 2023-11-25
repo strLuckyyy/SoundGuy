@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dcxr6tu00rgus"]
+[gd_scene load_steps=10 format=3 uid="uid://dcxr6tu00rgus"]
 
 [ext_resource type="Texture2D" uid="uid://cbanxk8otnupa" path="res://Arte/Entidades/Inimigos/Morcego/AseImporter/Morcego.ase1.png" id="2_0vjpl"]
 [ext_resource type="Script" path="res://Arte/Entidades/Inimigos/Morcego/bat.gd" id="2_t86er"]
@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d361faq6py8sv" path="res://Arte/Entidades/Inimigos/Morcego/AseImporter/Morcego.ase4.png" id="5_dl5g4"]
 [ext_resource type="Texture2D" uid="uid://8cmjvw1eejol" path="res://Arte/Entidades/Inimigos/Morcego/AseImporter/Morcego.ase5.png" id="6_ceula"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_dxiyg"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_f7msx"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -30,30 +30,40 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iiskq"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_gd6a0"]
+radius = 59.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hv0d0"]
 size = Vector2(22, 8)
 
 [node name="Morcego" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="." groups=["Inimigos"]]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("2_t86er")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2"]
 light_mask = 8
 visibility_layer = 8
-sprite_frames = SubResource("SpriteFrames_dxiyg")
+sprite_frames = SubResource("SpriteFrames_f7msx")
 animation = &"idle"
-frame_progress = 0.965961
+frame = 4
+frame_progress = 0.243287
 
-[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
-position = Vector2(26, 8)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
-position = Vector2(-26, -10)
-shape = SubResource("RectangleShape2D_iiskq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="Area2D" type="Area2D" parent="CharacterBody2D2"]
 position = Vector2(0, -2)
-shape = SubResource("RectangleShape2D_iiskq")
+collision_layer = 2
+collision_mask = 2
 
-[connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
+[node name="detectionArea" type="CollisionShape2D" parent="CharacterBody2D2/Area2D"]
+shape = SubResource("CircleShape2D_gd6a0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_hv0d0")
+
+[connection signal="body_entered" from="CharacterBody2D2/Area2D" to="CharacterBody2D2" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="CharacterBody2D2/Area2D" to="CharacterBody2D2" method="_on_area_2d_body_exited"]

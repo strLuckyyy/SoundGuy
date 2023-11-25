@@ -1,0 +1,258 @@
+[gd_scene load_steps=33 format=3 uid="uid://bt0rso7yt0ohf"]
+
+[ext_resource type="Script" path="res://Cenas/Fases/Herus.gd" id="1_armyw"]
+[ext_resource type="Texture2D" uid="uid://c265p8bv301gm" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase18.png" id="2_2vihc"]
+[ext_resource type="Texture2D" uid="uid://bgd0jmgbcrpyy" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase19.png" id="3_y6wh8"]
+[ext_resource type="Texture2D" uid="uid://dkon8pgw3qt5f" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase20.png" id="4_uqkrd"]
+[ext_resource type="Texture2D" uid="uid://mbgigb0j1w5p" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase21.png" id="5_lp4h1"]
+[ext_resource type="Texture2D" uid="uid://iwq4sgp3ew2x" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase22.png" id="6_2rbuh"]
+[ext_resource type="Texture2D" uid="uid://bs6l1ti2xkm1g" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase5.png" id="7_lqio4"]
+[ext_resource type="Texture2D" uid="uid://c0nubl0oeca04" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase1.png" id="8_rlyx7"]
+[ext_resource type="Texture2D" uid="uid://jy2rgvf2sscd" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase3.png" id="9_r74bv"]
+[ext_resource type="Texture2D" uid="uid://co85edmf670g2" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase12.png" id="10_g81le"]
+[ext_resource type="Texture2D" uid="uid://dmeebrisagg7o" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase6.png" id="11_vr6ex"]
+[ext_resource type="Texture2D" uid="uid://dn623eephk36q" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase14.png" id="12_mbgd6"]
+[ext_resource type="Texture2D" uid="uid://ctfmixthefji5" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase16.png" id="13_rnq2v"]
+[ext_resource type="Texture2D" uid="uid://dp8ips1u4l6c5" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase2.png" id="14_neib7"]
+[ext_resource type="Texture2D" uid="uid://cj6xob5sliq2d" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase4.png" id="15_rgy0q"]
+[ext_resource type="Texture2D" uid="uid://cc20asw4o8bg6" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase11.png" id="16_3mlat"]
+[ext_resource type="Texture2D" uid="uid://c8rb5rkblr68w" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase13.png" id="17_o3f3h"]
+[ext_resource type="Texture2D" uid="uid://clbl8yv7ftdba" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase10.png" id="18_bb7wv"]
+[ext_resource type="Texture2D" uid="uid://cxkwbdlhygvql" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase7.png" id="19_btwgs"]
+[ext_resource type="Texture2D" uid="uid://m2r3nydvm2dd" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase8.png" id="20_ib6jo"]
+[ext_resource type="Texture2D" uid="uid://nbwwia7eiu85" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase9.png" id="21_q13yu"]
+[ext_resource type="Texture2D" uid="uid://bnpa5q0etv3qx" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase15.png" id="22_ovkyw"]
+[ext_resource type="Texture2D" uid="uid://xdpduqfajrpf" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase17.png" id="23_p4q03"]
+[ext_resource type="Script" path="res://Arte/Entidades/Personagens/Player/Wave.gd" id="24_glfus"]
+[ext_resource type="Texture2D" uid="uid://drvosuefgv7rg" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase23.png" id="25_fn5mv"]
+[ext_resource type="Texture2D" uid="uid://0fara0fe4cqk" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase24.png" id="26_bv5y1"]
+[ext_resource type="Texture2D" uid="uid://dwfgjxvwsv3vr" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase25.png" id="27_l0xv0"]
+[ext_resource type="Texture2D" uid="uid://dv5cbsjnmfbfx" path="res://Arte/Entidades/Personagens/Player/AseImporter/Protagonista.ase26.png" id="28_m2mqr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r86os"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2vihc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_y6wh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uqkrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lp4h1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2rbuh")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_lqio4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rlyx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lqio4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rlyx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lqio4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rlyx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lqio4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rlyx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lqio4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rlyx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lqio4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_r74bv")
+}],
+"loop": true,
+"name": &"idleDown",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_g81le")
+}],
+"loop": true,
+"name": &"idleLeft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_vr6ex")
+}],
+"loop": true,
+"name": &"idleRight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_mbgd6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rnq2v")
+}],
+"loop": true,
+"name": &"idleUp",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_neib7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lqio4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_rgy0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rlyx7")
+}],
+"loop": true,
+"name": &"walkDown",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_3mlat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_g81le")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_o3f3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_bb7wv")
+}],
+"loop": true,
+"name": &"walkLeft",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_btwgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ib6jo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_q13yu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vr6ex")
+}],
+"loop": true,
+"name": &"walkRight",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_ovkyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rnq2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_p4q03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_mbgd6")
+}],
+"loop": true,
+"name": &"walkUp",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c24l8"]
+radius = 8.0
+height = 32.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_35qno"]
+size = Vector2(26, 24.75)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_612d6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_fn5mv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_bv5y1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_l0xv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_m2mqr")
+}],
+"loop": false,
+"name": &"blast",
+"speed": 15.0
+}]
+
+[node name="Herus" type="Node2D" groups=["PlayerCharacter"]]
+position = Vector2(122, 26)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["PlayerCharacter"]]
+light_mask = 2
+visibility_layer = 2
+script = ExtResource("1_armyw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(1, 0)
+sprite_frames = SubResource("SpriteFrames_r86os")
+animation = &"attack"
+autoplay = "idleDown"
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(4.5, 4.5)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_c24l8")
+
+[node name="Wave" type="Area2D" parent="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("24_glfus")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Wave"]
+position = Vector2(1, 29.625)
+shape = SubResource("RectangleShape2D_35qno")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/Wave"]
+visible = false
+light_mask = 2
+visibility_layer = 2
+position = Vector2(1, 29)
+sprite_frames = SubResource("SpriteFrames_612d6")
+animation = &"blast"
+frame = 3
+frame_progress = 1.0
+
+[connection signal="body_entered" from="CharacterBody2D/Wave" to="CharacterBody2D" method="_on_wave_body_entered"]
