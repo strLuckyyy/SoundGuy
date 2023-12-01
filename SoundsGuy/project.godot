@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.1", "Mobile")
 
 [aseprite_importers]
 
-aseprite_executable_path="C:/Users/abraa/Downloads/LibreSprite-Windows-x86_64/libresprite.exe"
+aseprite_executable_path="\"C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\LibreSprite\\libresprite.exe\""
 
 [display]
 
@@ -53,6 +53,11 @@ down={
 attack={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"echo":false,"script":null)
+]
+}
+roll={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194325,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
 

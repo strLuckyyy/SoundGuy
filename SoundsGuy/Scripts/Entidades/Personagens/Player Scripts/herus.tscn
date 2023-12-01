@@ -189,8 +189,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c24l8"]
-radius = 8.0
-height = 32.0
+radius = 3.0
+height = 18.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_35qno"]
 size = Vector2(26, 24.75)
@@ -233,6 +233,8 @@ autoplay = "idleDown"
 zoom = Vector2(4.5, 4.5)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 13)
+rotation = 1.5708
 shape = SubResource("CapsuleShape2D_c24l8")
 
 [node name="Wave" type="Area2D" parent="CharacterBody2D"]
