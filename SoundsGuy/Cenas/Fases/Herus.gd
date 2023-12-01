@@ -8,7 +8,8 @@ func player():
 @export var move_speed = 75
 
 @onready var sprite = get_node("AnimatedSprite2D")
-
+var roll_speed = 120
+var rolling  = "no"
 var input_direction: get = _get_input_direction
 var sprite_direction = "down": get = _get_sprite_direction
 @export var attacking = "no"
@@ -19,17 +20,22 @@ func _physics_process(_delta):
 	move_and_slide()
 	set_animation("idleDown")
 	
+func _roll():
+	
+	
+
+
 func set_animation(animation):
-	if Input.is_action_just_pressed("attack") and attacking == "no":
+	if Input.is_action_just_pressed("attack") and attacking == "no" and rolling == 'no':
 		sprite.play("attack")
 		attacking = "yes"
 		await get_tree().create_timer(0.55).timeout
 		_waveAttack()
 		attacking = "no"
-	if velocity != Vector2.ZERO and attacking ==  "no":
+	if velocity != Vector2.ZERO and attacking ==  "no" and rolling == 'no':
 		animation = "walking"
 		sprite.play("walk"+sprite_direction)
-	elif velocity == Vector2.ZERO and attacking == "no":
+	elif velocity == Vector2.ZERO and attacking == "no" and rolling == 'no':
 		sprite.play("idle"+sprite_direction)
 
 func _get_input_direction():
