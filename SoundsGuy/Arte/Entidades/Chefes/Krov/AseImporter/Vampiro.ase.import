@@ -1,8 +1,8 @@
 [remap]
 
-importer="Aseprite Sprite2D Import"
+importer="Aseprite AnimatedSprite2D Import"
 type="PackedScene"
-uid="uid://da6l78avjtq7f"
+uid="uid://do7l4ql4wmylw"
 path="res://.godot/imported/Vampiro.ase-8cfaaf69341525a7d9c33df95f9aca81.scn"
 
 [deps]
@@ -23,6 +23,3 @@ animation/default/name="default"
 animation/default/direction=0
 animation/default/repeat_count=0
 animation/autoplay=""
-sprite2d/centered=true
-animation/strategy_(packed_spritesheet)=0
-animation/strategy_(grid-based_spritesheet)=0
