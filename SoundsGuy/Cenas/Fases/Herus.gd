@@ -38,6 +38,8 @@ func _physics_process(_delta):
 			velocity = Vector2.ZERO
 	elif dead == "yes":
 		sprite.play("death")
+		$Node2D/Background.stop()
+		$Node2D/Death.play()
 		await get_tree().create_timer(1).timeout
 		end = true
 
@@ -50,6 +52,7 @@ func set_animation(animation):
 			elif Input.is_action_just_pressed("roll"):
 				sprite.play("roll"+sprite_direction)
 				rolling = "yes"
+				$Node2D/Roll.play()
 				await get_tree().create_timer(0.65).timeout
 				rolling = "no"
 			elif velocity != Vector2.ZERO:
@@ -85,6 +88,7 @@ func _waveAttack():
 		$Wave/CollisionDown.disabled = false;
 		$Wave/CollisionDown/Sprite.visible = true;
 		$Wave/CollisionDown/Sprite.play("blast")
+		$Node2D/Attack.play()
 		await get_tree().create_timer(0.29).timeout
 		$Wave/CollisionDown.disabled = true;
 		$Wave/CollisionDown/Sprite.visible = false;
@@ -92,6 +96,7 @@ func _waveAttack():
 		$Wave/CollisionUp.disabled = false;
 		$Wave/CollisionUp/Sprite.visible = true;
 		$Wave/CollisionUp/Sprite.play("blast")
+		$Node2D/Attack.play()
 		await get_tree().create_timer(0.29).timeout
 		$Wave/CollisionUp.disabled = true;
 		$Wave/CollisionUp/Sprite.visible = false;
@@ -99,6 +104,7 @@ func _waveAttack():
 		$Wave/CollisionLeft.disabled = false;
 		$Wave/CollisionLeft/Sprite.visible = true;
 		$Wave/CollisionLeft/Sprite.play("blast")
+		$Node2D/Attack.play()
 		await get_tree().create_timer(0.29).timeout
 		$Wave/CollisionLeft.disabled = true;
 		$Wave/CollisionLeft/Sprite.visible = false;
@@ -106,6 +112,7 @@ func _waveAttack():
 		$Wave/CollisionRight.disabled = false;
 		$Wave/CollisionRight/Sprite.visible = true;
 		$Wave/CollisionRight/Sprite.play("blast")
+		$Node2D/Attack.play()
 		await get_tree().create_timer(0.2).timeout
 		$Wave/CollisionRight.disabled = true;
 		$Wave/CollisionRight/Sprite.visible = false;
@@ -113,12 +120,15 @@ func _waveAttack():
 
 func _on_wave_body_entered(body):
 	if body.is_in_group("Inimigos"):
+		$Morcego/Death.play()
 		body.queue_free()
 	pass
 
 func _on_enemy_collision_body_entered(body):
 	if dead == "no":
 		if body.is_in_group("Inimigos"):
+			$Morcego/Bite.play()
+			$Node2D/Hit.play()
 			vida -= 1
 			if vida <= 0:
 				dead = "yes"

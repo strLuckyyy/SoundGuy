@@ -11904,4 +11904,4 @@ region_rect = Rect2(77, 687, 4, 4)
 position = Vector2(-121, -29)
 
 [node name="Krov" parent="Boss" instance=ExtResource("20_sy5f3")]
-position = Vector2(274, 1453)
+position = Vector2(393, 1461)
