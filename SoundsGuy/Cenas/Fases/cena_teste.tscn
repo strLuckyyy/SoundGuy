@@ -11873,31 +11873,22 @@ texture = ExtResource("18_3j270")
 position = Vector2(-28, -23)
 
 [node name="Morcego" parent="Inimigos" instance=ExtResource("19_0hjm1")]
-position = Vector2(244, 245)
+position = Vector2(193, 190)
 
 [node name="Morcego2" parent="Inimigos" instance=ExtResource("19_0hjm1")]
-position = Vector2(231, 659)
-
-[node name="Morcego10" parent="Inimigos" instance=ExtResource("19_0hjm1")]
-position = Vector2(294, 834)
+position = Vector2(255, 716)
 
 [node name="Morcego3" parent="Inimigos" instance=ExtResource("19_0hjm1")]
-position = Vector2(300, 615)
-
-[node name="Morcego8" parent="Inimigos" instance=ExtResource("19_0hjm1")]
-position = Vector2(223, 498)
-
-[node name="Morcego9" parent="Inimigos" instance=ExtResource("19_0hjm1")]
-position = Vector2(302, 1047)
+position = Vector2(246, 603)
 
 [node name="Morcego4" parent="Inimigos" instance=ExtResource("19_0hjm1")]
-position = Vector2(248, 942)
+position = Vector2(287, 458)
 
 [node name="Morcego5" parent="Inimigos" instance=ExtResource("19_0hjm1")]
-position = Vector2(222, 383)
+position = Vector2(200, 365)
 
-[node name="Morcego7" parent="Inimigos" instance=ExtResource("19_0hjm1")]
-position = Vector2(175, 164)
+[node name="Morcego6" parent="Inimigos" instance=ExtResource("19_0hjm1")]
+position = Vector2(250, 276)
 
 [node name="Objetos" type="Node2D" parent="."]
 position = Vector2(-134, -22)
@@ -11913,7 +11904,4 @@ region_rect = Rect2(77, 687, 4, 4)
 position = Vector2(-121, -29)
 
 [node name="Krov" parent="Boss" instance=ExtResource("20_sy5f3")]
-position = Vector2(393, 1461)
-
-[node name="Morcego4" parent="." instance=ExtResource("19_0hjm1")]
-position = Vector2(280, 409)
+position = Vector2(274, 1453)

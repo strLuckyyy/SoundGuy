@@ -53,7 +53,7 @@ light_mask = 8
 visibility_layer = 8
 sprite_frames = SubResource("SpriteFrames_f7msx")
 animation = &"idle"
-frame_progress = 0.838219
+frame_progress = 0.524963
 
 [node name="Area2D" type="Area2D" parent="CharacterBody2D"]
 position = Vector2(0, -2)

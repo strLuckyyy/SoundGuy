@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=3 uid="uid://bt0rso7yt0ohf"]
+[gd_scene load_steps=80 format=3 uid="uid://bt0rso7yt0ohf"]
 
 [ext_resource type="Script" path="res://Cenas/Fases/Herus.gd" id="1_armyw"]
 [ext_resource type="Texture2D" uid="uid://8i036hga37wq" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase1.png" id="2_waqnf"]
@@ -72,13 +72,6 @@
 [ext_resource type="Texture2D" uid="uid://cfsprcyofjl0" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase47.png" id="56_xemvr"]
 [ext_resource type="Texture2D" uid="uid://blontjn0g785t" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase48.png" id="57_g7svy"]
 [ext_resource type="Texture2D" uid="uid://8wf18kgy7csc" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase49.png" id="58_y48dj"]
-[ext_resource type="AudioStream" uid="uid://difqr5c5ab7q6" path="res://Sons/Attck2.wav" id="73_ta8ui"]
-[ext_resource type="AudioStream" uid="uid://cdx8lg3qm0poy" path="res://Sons/Roll.wav" id="74_pkfpt"]
-[ext_resource type="AudioStream" uid="uid://c0m2305x7iir7" path="res://Sons/giant4.wav" id="75_0puae"]
-[ext_resource type="AudioStream" uid="uid://bk5do4no2md7b" path="res://Sons/death.wav" id="75_ks64g"]
-[ext_resource type="AudioStream" uid="uid://d0vmimmgnfok0" path="res://Sons/cold-cinematic-landscape-116954.mp3" id="77_ulxsv"]
-[ext_resource type="AudioStream" uid="uid://djngmcd1t8qtj" path="res://Sons/bite.wav" id="78_p6g7e"]
-[ext_resource type="AudioStream" uid="uid://c07ynpuawa0c7" path="res://Sons/interface2.wav" id="79_tjeu2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ov02l"]
 radius = 8.0
@@ -535,7 +528,7 @@ position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_r86os")
 animation = &"idleDown"
 autoplay = "idleDown"
-frame_progress = 0.265745
+frame_progress = 0.489899
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(4, 4)
@@ -552,7 +545,7 @@ position = Vector2(1, 13)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_c24l8")
 
-[node name="Wave" type="Area2D" parent="CharacterBody2D"]
+[node name="Wave" type="Area2D" parent="CharacterBody2D" groups=["Ataque"]]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("24_glfus")
@@ -615,40 +608,6 @@ visibility_layer = 2
 position = Vector2(0, -3)
 sprite_frames = SubResource("SpriteFrames_612d6")
 animation = &"blast"
-
-[node name="Node2D" type="Node2D" parent="CharacterBody2D"]
-
-[node name="Attack" type="AudioStreamPlayer" parent="CharacterBody2D/Node2D"]
-stream = ExtResource("73_ta8ui")
-volume_db = -6.0
-
-[node name="Roll" type="AudioStreamPlayer" parent="CharacterBody2D/Node2D"]
-stream = ExtResource("74_pkfpt")
-
-[node name="Hit" type="AudioStreamPlayer" parent="CharacterBody2D/Node2D"]
-stream = ExtResource("75_0puae")
-volume_db = -14.0
-pitch_scale = 1.75
-
-[node name="Death" type="AudioStreamPlayer2D" parent="CharacterBody2D/Node2D"]
-stream = ExtResource("75_ks64g")
-volume_db = 3.0
-
-[node name="Background" type="AudioStreamPlayer" parent="CharacterBody2D/Node2D"]
-stream = ExtResource("77_ulxsv")
-volume_db = -17.0
-pitch_scale = 0.9
-autoplay = true
-
-[node name="Morcego" type="Node2D" parent="CharacterBody2D"]
-
-[node name="Bite" type="AudioStreamPlayer" parent="CharacterBody2D/Morcego"]
-stream = ExtResource("78_p6g7e")
-
-[node name="Death" type="AudioStreamPlayer" parent="CharacterBody2D/Morcego"]
-stream = ExtResource("79_tjeu2")
-volume_db = -10.0
-pitch_scale = 2.3
 
 [connection signal="body_entered" from="CharacterBody2D/EnemyCollision" to="CharacterBody2D" method="_on_enemy_collision_body_entered"]
 [connection signal="body_entered" from="CharacterBody2D/Wave" to="CharacterBody2D" method="_on_wave_body_entered"]
