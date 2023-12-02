@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://bt0rso7yt0ohf"]
+[gd_scene load_steps=80 format=3 uid="uid://bt0rso7yt0ohf"]
 
 [ext_resource type="Script" path="res://Cenas/Fases/Herus.gd" id="1_armyw"]
 [ext_resource type="Texture2D" uid="uid://8i036hga37wq" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase1.png" id="2_waqnf"]
@@ -15,21 +15,37 @@
 [ext_resource type="Texture2D" uid="uid://davi04qxfcnt5" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase59.png" id="11_yit74"]
 [ext_resource type="Texture2D" uid="uid://dfamy17fnshii" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase2.png" id="12_66f4k"]
 [ext_resource type="Texture2D" uid="uid://dft7nwuqj1cq7" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase4.png" id="13_qf22e"]
+[ext_resource type="Texture2D" uid="uid://jqon4kjue8w8" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase72.png" id="14_1c6al"]
 [ext_resource type="Texture2D" uid="uid://dmver1i512h5a" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase3.png" id="14_uas7u"]
 [ext_resource type="Texture2D" uid="uid://b6haq3voblxg0" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase11.png" id="15_3saso"]
+[ext_resource type="Texture2D" uid="uid://crvqnnf7pqqe0" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase73.png" id="15_dxpjg"]
 [ext_resource type="Texture2D" uid="uid://bdt72ykg8sqwk" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase13.png" id="16_0iu85"]
+[ext_resource type="Texture2D" uid="uid://b0ykqrbgdg7jf" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase74.png" id="16_cjf6f"]
+[ext_resource type="Texture2D" uid="uid://dx21eccwsftyo" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase75.png" id="17_de0x5"]
+[ext_resource type="Texture2D" uid="uid://trs7uvy6mw7k" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase60.png" id="18_2aic1"]
+[ext_resource type="Texture2D" uid="uid://bjyjyl2dt0chr" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase61.png" id="19_skm0i"]
+[ext_resource type="Texture2D" uid="uid://cjxnwy7h8gaxb" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase62.png" id="20_7ffb6"]
 [ext_resource type="Texture2D" uid="uid://dk852qpre2156" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase23.png" id="20_8jupf"]
 [ext_resource type="Texture2D" uid="uid://8kb7jeca763s" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase25.png" id="20_54twv"]
+[ext_resource type="Texture2D" uid="uid://d11oupqjmmlum" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase63.png" id="21_qs44h"]
 [ext_resource type="Texture2D" uid="uid://brufx5lgwpqc" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase26.png" id="21_wwiyj"]
+[ext_resource type="Texture2D" uid="uid://duteryir64woh" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase64.png" id="22_isxw2"]
 [ext_resource type="Texture2D" uid="uid://d22nl6kpeyud1" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase27.png" id="22_kkhbp"]
 [ext_resource type="Texture2D" uid="uid://bg2osrverx1no" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase28.png" id="23_8jy8o"]
+[ext_resource type="Texture2D" uid="uid://uay70uc3j5r3" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase65.png" id="23_pmx1g"]
+[ext_resource type="Texture2D" uid="uid://ovewo2t3rr2f" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase66.png" id="24_41gus"]
 [ext_resource type="Script" path="res://Arte/Entidades/Personagens/Player/Wave.gd" id="24_glfus"]
 [ext_resource type="Texture2D" uid="uid://8cybcufxiwn8" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase29.png" id="24_ubas4"]
+[ext_resource type="Texture2D" uid="uid://db4nxaw4o00ws" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase67.png" id="25_8xqy5"]
 [ext_resource type="Texture2D" uid="uid://dq568un57n2og" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase30.png" id="25_26cfu"]
 [ext_resource type="Texture2D" uid="uid://c78xxm8hrjwct" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase31.png" id="26_po55j"]
+[ext_resource type="Texture2D" uid="uid://dsxwplanvp5iu" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase68.png" id="26_xpdgx"]
 [ext_resource type="Texture2D" uid="uid://d2e56rbu4ttm1" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase32.png" id="27_cl81e"]
+[ext_resource type="Texture2D" uid="uid://el4gtqdkknpf" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase69.png" id="27_d5dsm"]
 [ext_resource type="Texture2D" uid="uid://brbwphx7gndu3" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase33.png" id="28_mb5v5"]
+[ext_resource type="Texture2D" uid="uid://dasw34u8fyf1k" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase70.png" id="28_r0ine"]
 [ext_resource type="Texture2D" uid="uid://c5cvrb2h14s44" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase34.png" id="29_4csj8"]
+[ext_resource type="Texture2D" uid="uid://d2ht10g061h6" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase71.png" id="29_87t3c"]
 [ext_resource type="Texture2D" uid="uid://41wl7140w1rw" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase35.png" id="30_k3dqi"]
 [ext_resource type="Texture2D" uid="uid://cjnnkr1f16phg" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase36.png" id="31_teejl"]
 [ext_resource type="Texture2D" uid="uid://mibc2nnl5u53" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase37.png" id="32_1cssn"]
@@ -56,6 +72,10 @@
 [ext_resource type="Texture2D" uid="uid://cfsprcyofjl0" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase47.png" id="56_xemvr"]
 [ext_resource type="Texture2D" uid="uid://blontjn0g785t" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase48.png" id="57_g7svy"]
 [ext_resource type="Texture2D" uid="uid://8wf18kgy7csc" path="res://Arte/Entidades/Personagens/Player/AseSprite/Protagonistav2.ase49.png" id="58_y48dj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ov02l"]
+radius = 8.0
+height = 32.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r86os"]
 animations = [{
@@ -114,6 +134,126 @@ animations = [{
 "loop": false,
 "name": &"attackUp",
 "speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_de0x5")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_1c6al")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dxpjg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_cjf6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_de0x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_de0x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_de0x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_de0x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_de0x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_de0x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_de0x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_de0x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_de0x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_de0x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_de0x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_de0x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_de0x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_de0x5")
+}],
+"loop": false,
+"name": &"death",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_2aic1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_skm0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_7ffb6")
+}],
+"loop": false,
+"name": &"hurtDown",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_qs44h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_isxw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_pmx1g")
+}],
+"loop": false,
+"name": &"hurtLeft",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_41gus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_8xqy5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_xpdgx")
+}],
+"loop": true,
+"name": &"hurtRight",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_d5dsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_r0ine")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_87t3c")
+}],
+"loop": false,
+"name": &"hurtUp",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -365,25 +505,29 @@ size = Vector2(20, 17)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iwqi7"]
 size = Vector2(16, 19.1875)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ov02l"]
-radius = 8.0
-height = 32.0
-
 [node name="Herus" type="Node2D" groups=["PlayerCharacter"]]
 position = Vector2(122, 26)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["PlayerCharacter"]]
 light_mask = 2
 visibility_layer = 2
+collision_layer = 3
 script = ExtResource("1_armyw")
+
+[node name="EnemyCollision" type="Area2D" parent="CharacterBody2D"]
+position = Vector2(-7.62939e-06, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="EnemyCollision" type="CollisionShape2D" parent="CharacterBody2D/EnemyCollision"]
+position = Vector2(1, 0)
+shape = SubResource("CapsuleShape2D_ov02l")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_r86os")
-animation = &"rollDown"
+animation = &"death"
 autoplay = "idleDown"
-frame = 4
-frame_progress = 0.94262
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(4.5, 4.5)
@@ -394,11 +538,12 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_c24l8")
 
 [node name="Wave" type="Area2D" parent="CharacterBody2D"]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("24_glfus")
 
 [node name="CollisionDown" type="CollisionShape2D" parent="CharacterBody2D/Wave"]
+light_mask = 3
 position = Vector2(10, 23)
 shape = SubResource("RectangleShape2D_35qno")
 disabled = true
@@ -412,6 +557,7 @@ sprite_frames = SubResource("SpriteFrames_612d6")
 animation = &"blast"
 
 [node name="CollisionRight" type="CollisionShape2D" parent="CharacterBody2D/Wave"]
+light_mask = 3
 position = Vector2(27, 5)
 shape = SubResource("RectangleShape2D_0ogyl")
 disabled = true
@@ -426,6 +572,7 @@ sprite_frames = SubResource("SpriteFrames_612d6")
 animation = &"blast"
 
 [node name="CollisionUp" type="CollisionShape2D" parent="CharacterBody2D/Wave"]
+light_mask = 3
 position = Vector2(5, -26)
 shape = SubResource("RectangleShape2D_35qno")
 disabled = true
@@ -440,6 +587,7 @@ sprite_frames = SubResource("SpriteFrames_612d6")
 animation = &"blast"
 
 [node name="CollisionLeft" type="CollisionShape2D" parent="CharacterBody2D/Wave"]
+light_mask = 3
 position = Vector2(-26, 4)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_iwqi7")
@@ -453,8 +601,5 @@ position = Vector2(0, -3)
 sprite_frames = SubResource("SpriteFrames_612d6")
 animation = &"blast"
 
-[node name="EnemyCollision" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(1, 0)
-shape = SubResource("CapsuleShape2D_ov02l")
-
+[connection signal="body_entered" from="CharacterBody2D/EnemyCollision" to="CharacterBody2D" method="_on_enemy_collision_body_entered"]
 [connection signal="body_entered" from="CharacterBody2D/Wave" to="CharacterBody2D" method="_on_wave_body_entered"]

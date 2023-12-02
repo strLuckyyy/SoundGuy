@@ -5,45 +5,60 @@ class_name PlayerChar
 func player():
 	pass
 
+var enemy = null
 @export var move_speed = 75
-
 @onready var sprite = get_node("AnimatedSprite2D")
 @export var roll_speed = 125
 var input_direction= 0: get = _get_input_direction
 var sprite_direction = "down": get = _get_sprite_direction
-var last_direction = 1
+var last_direction = Vector2.ZERO
 @export var busy = "no"
 var rolling = "no"
 var attacking = "no"
+@export var vida = 5
+var dead = "no"
+var end = false
 
 func _physics_process(_delta):
-	move_and_slide()
-	if attacking == "no" and rolling == "no":
-		velocity = input_direction * move_speed
-		set_animation("idleDown")
-	elif rolling == "yes":
-		move_speed = roll_speed
-		velocity = last_direction * move_speed
-		await get_tree().create_timer(0.62).timeout
-		move_speed = 75
-	elif attacking == "yes":
-		velocity = Vector2.ZERO
-func set_animation(animation):
-	if attacking == "no" and rolling == "no":
+	if end == true:
+		sprite.play("dead")
 		if Input.is_action_just_pressed("attack"):
-			sprite.play("attack"+sprite_direction)
-			_waveAttack()
-		elif Input.is_action_just_pressed("roll"):
-			sprite.play("roll"+sprite_direction)
-			rolling = "yes"
-			await get_tree().create_timer(0.65).timeout
-			rolling = "no"
-		elif velocity != Vector2.ZERO:
-			sprite.play("walk"+sprite_direction)
-		elif velocity == Vector2.ZERO:
-			sprite.play("idle"+sprite_direction)
+			get_tree().reload_current_scene()
+	elif dead == "no":
+		move_and_slide()
+		if attacking == "no" and rolling == "no":
+			velocity = input_direction * move_speed
+			set_animation("idleDown")
+		elif rolling == "yes":
+			move_speed = roll_speed
+			velocity = last_direction * move_speed
+			await get_tree().create_timer(0.62).timeout
+			move_speed = 75
+		elif attacking == "yes":
+			velocity = Vector2.ZERO
+	elif dead == "yes":
+		sprite.play("death")
+		await get_tree().create_timer(1).timeout
+		end = true
+
+func set_animation(animation):
+	if dead == "no":
+		if attacking == "no" and rolling == "no" and dead == "no":
+			if Input.is_action_just_pressed("attack"):
+				sprite.play("attack"+sprite_direction)
+				_waveAttack()
+			elif Input.is_action_just_pressed("roll"):
+				sprite.play("roll"+sprite_direction)
+				rolling = "yes"
+				await get_tree().create_timer(0.65).timeout
+				rolling = "no"
+			elif velocity != Vector2.ZERO:
+				sprite.play("walk"+sprite_direction)
+			elif velocity == Vector2.ZERO:
+				sprite.play("idle"+sprite_direction)
 
 func _get_input_direction():
+	if attacking == "no" and rolling == "no" and dead == "no":
 		var x = -int(Input.is_action_pressed("left")) + int(Input.is_action_pressed("right"))
 		var y = -int(Input.is_action_pressed("up")) + int(Input.is_action_pressed("down"))
 		input_direction = Vector2(x,y).normalized()
@@ -100,3 +115,16 @@ func _on_wave_body_entered(body):
 	if body.is_in_group("Inimigos"):
 		body.queue_free()
 	pass
+
+func _on_enemy_collision_body_entered(body):
+	if dead == "no":
+		if body.is_in_group("Inimigos"):
+			vida -= 1
+			if vida <= 0:
+				dead = "yes"
+				print ("dead")
+			elif vida > 0:
+				sprite.play("hurt"+sprite_direction)
+				attacking = "yes"
+				await get_tree().create_timer(0.3).timeout
+				attacking = "no"

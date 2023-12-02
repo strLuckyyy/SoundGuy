@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://d361faq6py8sv" path="res://Arte/Entidades/Inimigos/Morcego/AseImporter/Morcego.ase4.png" id="5_dl5g4"]
 [ext_resource type="Texture2D" uid="uid://8cmjvw1eejol" path="res://Arte/Entidades/Inimigos/Morcego/AseImporter/Morcego.ase5.png" id="6_ceula"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hv0d0"]
+size = Vector2(22, 8)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_f7msx"]
 animations = [{
 "frames": [{
@@ -27,41 +30,38 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gd6a0"]
 radius = 59.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hv0d0"]
-size = Vector2(22, 8)
-
 [node name="Morcego" type="Node2D"]
 
-[node name="CharacterBody2D2" type="CharacterBody2D" parent="." groups=["Inimigos"]]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Inimigos"]]
 collision_layer = 2
 collision_mask = 2
+up_direction = Vector2(0, 1)
 script = ExtResource("2_t86er")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_hv0d0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 light_mask = 8
 visibility_layer = 8
 sprite_frames = SubResource("SpriteFrames_f7msx")
 animation = &"idle"
-frame = 4
-frame_progress = 0.243287
+frame_progress = 0.540247
 
-[node name="Area2D" type="Area2D" parent="CharacterBody2D2"]
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
 position = Vector2(0, -2)
 collision_layer = 2
 collision_mask = 2
 
-[node name="detectionArea" type="CollisionShape2D" parent="CharacterBody2D2/Area2D"]
+[node name="detectionArea" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
 shape = SubResource("CircleShape2D_gd6a0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
-position = Vector2(0, -2)
-shape = SubResource("RectangleShape2D_hv0d0")
-
-[connection signal="body_entered" from="CharacterBody2D2/Area2D" to="CharacterBody2D2" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="CharacterBody2D2/Area2D" to="CharacterBody2D2" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_exited"]
