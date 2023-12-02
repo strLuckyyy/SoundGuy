@@ -619,16 +619,16 @@ stream = ExtResource("74_pkfpt")
 
 [node name="Hit" type="AudioStreamPlayer" parent="CharacterBody2D/Node2D"]
 stream = ExtResource("75_0puae")
-volume_db = -10.0
+volume_db = -14.0
 pitch_scale = 1.75
 
 [node name="Death" type="AudioStreamPlayer2D" parent="CharacterBody2D/Node2D"]
 stream = ExtResource("75_ks64g")
-volume_db = 5.0
+volume_db = 3.0
 
 [node name="Background" type="AudioStreamPlayer" parent="CharacterBody2D/Node2D"]
 stream = ExtResource("77_ulxsv")
-volume_db = -13.0
+volume_db = -17.0
 pitch_scale = 0.9
 autoplay = true
 
@@ -639,7 +639,7 @@ stream = ExtResource("78_p6g7e")
 
 [node name="Death" type="AudioStreamPlayer" parent="CharacterBody2D/Morcego"]
 stream = ExtResource("79_tjeu2")
-volume_db = -5.0
+volume_db = -10.0
 pitch_scale = 2.3
 
 [connection signal="body_entered" from="CharacterBody2D/EnemyCollision" to="CharacterBody2D" method="_on_enemy_collision_body_entered"]
