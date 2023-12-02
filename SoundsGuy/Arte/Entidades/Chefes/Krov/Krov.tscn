@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://bne7strr8m0v5"]
+[gd_scene load_steps=73 format=3 uid="uid://bne7strr8m0v5"]
 
 [ext_resource type="Texture2D" uid="uid://ceuo4d6hobsh2" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase1.png" id="1_pdlk8"]
 [ext_resource type="Texture2D" uid="uid://biqougqaik67e" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase2.png" id="2_r0vu8"]
@@ -61,6 +61,10 @@
 [ext_resource type="Texture2D" uid="uid://b1mngiosf2pss" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase27.png" id="59_oxrdd"]
 [ext_resource type="Texture2D" uid="uid://dasrqo1fr3w2g" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase28.png" id="60_uvspv"]
 [ext_resource type="Texture2D" uid="uid://b3jnsko6dv0ik" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase29.png" id="61_cfn8o"]
+[ext_resource type="AudioStream" uid="uid://0yhwxs2u5yip" path="res://Sons/laugh2.wav" id="62_grnlu"]
+[ext_resource type="AudioStream" uid="uid://ddivim1efr40v" path="res://Sons/teleport-1.wav" id="63_e7ptp"]
+[ext_resource type="AudioStream" uid="uid://dswbk87pdb3xh" path="res://Sons/teleport-2.wav" id="64_puptu"]
+[ext_resource type="AudioStream" uid="uid://bh4te2rjatn77" path="res://Sons/firemagic.wav" id="65_27gp2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ksmal"]
 size = Vector2(20, 32)
@@ -425,3 +429,19 @@ shape = SubResource("RectangleShape2D_a7cml")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/ataque_esquerda/area_ataque"]
 visible = false
 sprite_frames = SubResource("SpriteFrames_ta5kv")
+
+[node name="Sound" type="Node2D" parent="CharacterBody2D"]
+
+[node name="Laugh" type="AudioStreamPlayer2D" parent="CharacterBody2D/Sound"]
+stream = ExtResource("62_grnlu")
+pitch_scale = 0.85
+
+[node name="Tp IN" type="AudioStreamPlayer2D" parent="CharacterBody2D/Sound"]
+stream = ExtResource("63_e7ptp")
+
+[node name="Tp OUT" type="AudioStreamPlayer2D" parent="CharacterBody2D/Sound"]
+stream = ExtResource("64_puptu")
+
+[node name="Summon" type="AudioStreamPlayer2D" parent="CharacterBody2D/Sound"]
+stream = ExtResource("65_27gp2")
+pitch_scale = 2.5
