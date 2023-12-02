@@ -5,6 +5,7 @@ class_name PlayerChar
 func player():
 	pass
 
+var hurt = "no"
 var enemy = null
 @export var move_speed = 75
 @onready var sprite = get_node("AnimatedSprite2D")
@@ -20,6 +21,7 @@ var dead = "no"
 var end = false
 
 func _physics_process(_delta):
+	_update_text()
 	if end == true:
 		sprite.play("dead")
 		if Input.is_action_just_pressed("attack"):
@@ -125,7 +127,7 @@ func _on_wave_body_entered(body):
 	pass
 
 func _on_enemy_collision_body_entered(body):
-	if dead == "no":
+	if dead == "no" and hurt == "no":
 		if body.is_in_group("Inimigos"):
 			$Morcego/Bite.play()
 			$Node2D/Hit.play()
@@ -134,7 +136,13 @@ func _on_enemy_collision_body_entered(body):
 				dead = "yes"
 				print ("dead")
 			elif vida > 0:
+				hurt = "yes"
 				sprite.play("hurt"+sprite_direction)
 				attacking = "yes"
-				await get_tree().create_timer(0.3).timeout
+				await get_tree().create_timer(0.2).timeout
 				attacking = "no"
+				await get_tree().create_timer(1).timeout
+				hurt = "no"
+
+func _update_text():
+	$Camera2D/Label.text = ("Vida:" + str(vida))
