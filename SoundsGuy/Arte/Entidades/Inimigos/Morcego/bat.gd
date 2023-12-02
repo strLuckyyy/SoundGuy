@@ -6,7 +6,7 @@ var speed = 20
 var player_chase = false
 var motion = Vector2(0,0)
 @onready var player = $"../../../Personagens/Herus/CharacterBody2D"
-var character: PlayerChar
+
 
 func _physics_process(delta: float) -> void:
 	_idle()

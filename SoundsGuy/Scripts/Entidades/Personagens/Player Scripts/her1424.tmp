@@ -380,10 +380,9 @@ script = ExtResource("1_armyw")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_r86os")
-animation = &"rollDown"
+animation = &"walkUp"
 autoplay = "idleDown"
-frame = 4
-frame_progress = 0.94262
+frame_progress = 0.449169
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(4.5, 4.5)

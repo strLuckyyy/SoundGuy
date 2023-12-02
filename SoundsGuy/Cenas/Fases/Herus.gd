@@ -8,41 +8,48 @@ func player():
 @export var move_speed = 75
 
 @onready var sprite = get_node("AnimatedSprite2D")
-var roll_speed = 120
-var rolling  = "no"
-var input_direction: get = _get_input_direction
+@export var roll_speed = 125
+var input_direction= 0: get = _get_input_direction
 var sprite_direction = "down": get = _get_sprite_direction
-@export var attacking = "no"
-var can_attack
+var last_direction = 1
+@export var busy = "no"
+var rolling = "no"
+var attacking = "no"
 
 func _physics_process(_delta):
-	velocity = input_direction * move_speed
 	move_and_slide()
-	set_animation("idleDown")
-	
-func _roll():
-	
-	
-
-
+	if attacking == "no" and rolling == "no":
+		velocity = input_direction * move_speed
+		set_animation("idleDown")
+	elif rolling == "yes":
+		move_speed = roll_speed
+		velocity = last_direction * move_speed
+		await get_tree().create_timer(0.62).timeout
+		move_speed = 75
+	elif attacking == "yes":
+		velocity = Vector2.ZERO
 func set_animation(animation):
-	if Input.is_action_just_pressed("attack") and attacking == "no" and rolling == 'no':
-		sprite.play("attack")
-		attacking = "yes"
-		await get_tree().create_timer(0.55).timeout
-		_waveAttack()
-		attacking = "no"
-	if velocity != Vector2.ZERO and attacking ==  "no" and rolling == 'no':
-		animation = "walking"
-		sprite.play("walk"+sprite_direction)
-	elif velocity == Vector2.ZERO and attacking == "no" and rolling == 'no':
-		sprite.play("idle"+sprite_direction)
+	if attacking == "no" and rolling == "no":
+		if Input.is_action_just_pressed("attack"):
+			sprite.play("attack"+sprite_direction)
+			_waveAttack()
+		elif Input.is_action_just_pressed("roll"):
+			sprite.play("roll"+sprite_direction)
+			rolling = "yes"
+			await get_tree().create_timer(0.65).timeout
+			rolling = "no"
+		elif velocity != Vector2.ZERO:
+			sprite.play("walk"+sprite_direction)
+		elif velocity == Vector2.ZERO:
+			sprite.play("idle"+sprite_direction)
 
 func _get_input_direction():
-	var x = -int(Input.is_action_pressed("left")) + int(Input.is_action_pressed("right"))
-	var y = -int(Input.is_action_pressed("up")) + int(Input.is_action_pressed("down"))
-	input_direction = Vector2(x,y).normalized()
-	return input_direction
+		var x = -int(Input.is_action_pressed("left")) + int(Input.is_action_pressed("right"))
+		var y = -int(Input.is_action_pressed("up")) + int(Input.is_action_pressed("down"))
+		input_direction = Vector2(x,y).normalized()
+		if input_direction != Vector2.ZERO:
+			last_direction = input_direction
+		return input_direction
 
 func _get_sprite_direction():
 	match input_direction:
@@ -57,12 +64,37 @@ func _get_sprite_direction():
 	return sprite_direction
 
 func _waveAttack():
-	$Wave/CollisionShape2D.disabled = false;
-	$Wave/AnimatedSprite2D.visible = true;
-	$Wave/AnimatedSprite2D.play("blast")
-	await get_tree().create_timer(0.29).timeout
-	$Wave/CollisionShape2D.disabled = true;
-	$Wave/AnimatedSprite2D.visible = false;
+	attacking = "yes"
+	await get_tree().create_timer(0.45).timeout
+	if sprite_direction == "Down":
+		$Wave/CollisionDown.disabled = false;
+		$Wave/CollisionDown/Sprite.visible = true;
+		$Wave/CollisionDown/Sprite.play("blast")
+		await get_tree().create_timer(0.29).timeout
+		$Wave/CollisionDown.disabled = true;
+		$Wave/CollisionDown/Sprite.visible = false;
+	elif sprite_direction == "Up":
+		$Wave/CollisionUp.disabled = false;
+		$Wave/CollisionUp/Sprite.visible = true;
+		$Wave/CollisionUp/Sprite.play("blast")
+		await get_tree().create_timer(0.29).timeout
+		$Wave/CollisionUp.disabled = true;
+		$Wave/CollisionUp/Sprite.visible = false;
+	elif sprite_direction == "Left":
+		$Wave/CollisionLeft.disabled = false;
+		$Wave/CollisionLeft/Sprite.visible = true;
+		$Wave/CollisionLeft/Sprite.play("blast")
+		await get_tree().create_timer(0.29).timeout
+		$Wave/CollisionLeft.disabled = true;
+		$Wave/CollisionLeft/Sprite.visible = false;
+	elif sprite_direction == "Right":
+		$Wave/CollisionRight.disabled = false;
+		$Wave/CollisionRight/Sprite.visible = true;
+		$Wave/CollisionRight/Sprite.play("blast")
+		await get_tree().create_timer(0.2).timeout
+		$Wave/CollisionRight.disabled = true;
+		$Wave/CollisionRight/Sprite.visible = false;
+	attacking = "no"
 
 func _on_wave_body_entered(body):
 	if body.is_in_group("Inimigos"):
