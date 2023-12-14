@@ -384,8 +384,7 @@ shape = SubResource("RectangleShape2D_ksmal")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/CollisionShape2D"]
 sprite_frames = SubResource("SpriteFrames_n1jk6")
-animation = &"punchDown"
-frame_progress = 0.837258
+animation = &"idle"
 
 [node name="attack_right" type="Area2D" parent="CharacterBody2D"]
 
