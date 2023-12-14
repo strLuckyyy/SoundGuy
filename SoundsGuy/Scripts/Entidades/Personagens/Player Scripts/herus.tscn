@@ -218,7 +218,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"hurtDown",
-"speed": 10.0
+"speed": 18.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -232,7 +232,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"hurtLeft",
-"speed": 10.0
+"speed": 18.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -244,9 +244,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("26_xpdgx")
 }],
-"loop": true,
+"loop": false,
 "name": &"hurtRight",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -260,7 +260,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"hurtUp",
-"speed": 10.0
+"speed": 18.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -484,7 +484,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c24l8"]
 radius = 3.0
-height = 16.0
+height = 12.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_35qno"]
 size = Vector2(16, 19.1875)
@@ -518,8 +518,7 @@ position = Vector2(122, 26)
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["PlayerCharacter"]]
 light_mask = 2
 visibility_layer = 2
-collision_layer = 32768
-collision_mask = 32768
+collision_layer = 3
 script = ExtResource("1_armyw")
 
 [node name="EnemyCollision" type="Area2D" parent="CharacterBody2D"]
@@ -534,7 +533,7 @@ shape = SubResource("CapsuleShape2D_ov02l")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_r86os")
-animation = &"walkDown"
+animation = &"idleDown"
 autoplay = "idleDown"
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
@@ -625,7 +624,7 @@ volume_db = -15.0
 
 [node name="Hit" type="AudioStreamPlayer" parent="CharacterBody2D/Node2D"]
 stream = ExtResource("74_bvi5s")
-volume_db = -12.0
+volume_db = -17.622
 pitch_scale = 1.5
 
 [node name="Attack" type="AudioStreamPlayer" parent="CharacterBody2D/Node2D"]

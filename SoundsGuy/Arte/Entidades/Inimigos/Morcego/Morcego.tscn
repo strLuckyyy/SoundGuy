@@ -29,8 +29,23 @@ animations = [{
 "texture": ExtResource("6_ceula")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"moveDown",
 "speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"moveLeft",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"moveRight",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"moveUp",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gd6a0"]
@@ -52,8 +67,7 @@ shape = SubResource("RectangleShape2D_hv0d0")
 light_mask = 8
 visibility_layer = 8
 sprite_frames = SubResource("SpriteFrames_f7msx")
-animation = &"idle"
-frame_progress = 0.524963
+animation = &"moveDown"
 
 [node name="Area2D" type="Area2D" parent="CharacterBody2D"]
 position = Vector2(0, -2)

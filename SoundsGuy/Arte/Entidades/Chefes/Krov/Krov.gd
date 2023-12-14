@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var sprite = get_node("AnimatedSprite2D")
+@onready var sprite = get_node("CollisionShape2D/AnimatedSprite2D")
 
 var sprite_direction = "Down"
 var speed = 45
@@ -25,24 +25,20 @@ func _physics_process(delta):
 			Vector2.DOWN:
 				sprite_direction = "Down"
 				print('down')
-	set_animation("move",sprite_direction)
+		set_animation("move",sprite_direction)
+	else:
+		set_animation("idle",sprite_direction)
+	
+func set_animation(move,sprite_direction):
+	sprite.play(move+sprite_direction)
 
-func _on_area_2d_body_entered(body):
-	if body.is_in_group("Herus"):
+func _on_detection_body_entered(body):
+	if body.has_method("player"):
 		player = body
 		player_chase = true
 	pass
 
-func _on_area_2d_body_exited(player):
+func _on_detection_body_exited(body):
 	player = null
 	player_chase = false
 	pass
-
-func _die():
-	if dead == true:
-		sprite.play("death")
-		await get_tree().create_timer(0.3).timeout
-		self.queue_free()
-
-func set_animation(move,sprite_direction):
-	sprite.play(move+sprite_direction)

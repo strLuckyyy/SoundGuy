@@ -1,5 +1,6 @@
-[gd_scene load_steps=73 format=3 uid="uid://bne7strr8m0v5"]
+[gd_scene load_steps=76 format=3 uid="uid://bne7strr8m0v5"]
 
+[ext_resource type="Script" path="res://Arte/Entidades/Chefes/Krov/Krov.gd" id="1_5lrq6"]
 [ext_resource type="Texture2D" uid="uid://ceuo4d6hobsh2" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase1.png" id="1_pdlk8"]
 [ext_resource type="Texture2D" uid="uid://biqougqaik67e" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase2.png" id="2_r0vu8"]
 [ext_resource type="Texture2D" uid="uid://du2ut8wc7mvp4" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase3.png" id="3_bdppk"]
@@ -107,12 +108,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_qilby")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_pdlk8")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"idleDown",
 "speed": 5.0
 }, {
 "frames": [{
@@ -323,23 +321,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_uqvot"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("53_w7j4r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("54_543nt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("55_emyk8")
-}],
-"loop": true,
-"name": &"default",
-"speed": 7.0
-}]
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_xf08x"]
 animations = [{
 "frames": [{
@@ -374,60 +355,82 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_uqvot"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_w7j4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_543nt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_emyk8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcl1y"]
+size = Vector2(631, 317.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hhcu"]
+
 [node name="Krov" type="Node2D"]
 scale = Vector2(2, 2)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Chefes"]]
+collision_layer = 3
+collision_mask = 2
+script = ExtResource("1_5lrq6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_ksmal")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/CollisionShape2D"]
 sprite_frames = SubResource("SpriteFrames_n1jk6")
-animation = &"idle"
+animation = &"idleDown"
+autoplay = "idleDown"
+frame_progress = 0.460124
 
-[node name="attack_right" type="Area2D" parent="CharacterBody2D"]
+[node name="punch_attack" type="Area2D" parent="CharacterBody2D"]
+visible = false
 
-[node name="area_ataque" type="CollisionShape2D" parent="CharacterBody2D/attack_right"]
+[node name="attack_right" type="CollisionShape2D" parent="CharacterBody2D/punch_attack"]
 position = Vector2(20.5, -0.5)
 shape = SubResource("RectangleShape2D_a7cml")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/attack_right/area_ataque"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/punch_attack/attack_right"]
 visible = false
 sprite_frames = SubResource("SpriteFrames_1auxt")
 frame = 1
 frame_progress = 0.222222
 
-[node name="attack_down" type="Area2D" parent="CharacterBody2D/attack_right"]
-
-[node name="area_ataque" type="CollisionShape2D" parent="CharacterBody2D/attack_right/attack_down"]
-position = Vector2(0, 19)
-shape = SubResource("RectangleShape2D_a7cml")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/attack_right/attack_down/area_ataque"]
-visible = false
-sprite_frames = SubResource("SpriteFrames_uqvot")
-frame_progress = 0.175964
-
-[node name="attack_up" type="Area2D" parent="CharacterBody2D"]
-
-[node name="area_ataque" type="CollisionShape2D" parent="CharacterBody2D/attack_up"]
+[node name="attack_up" type="CollisionShape2D" parent="CharacterBody2D/punch_attack"]
 position = Vector2(0, -26)
 shape = SubResource("RectangleShape2D_a7cml")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/attack_up/area_ataque"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/punch_attack/attack_up"]
 visible = false
 sprite_frames = SubResource("SpriteFrames_xf08x")
 
-[node name="ataque_esquerda" type="Area2D" parent="CharacterBody2D"]
-
-[node name="area_ataque" type="CollisionShape2D" parent="CharacterBody2D/ataque_esquerda"]
+[node name="attack_left" type="CollisionShape2D" parent="CharacterBody2D/punch_attack"]
 position = Vector2(-20.5, -1)
 shape = SubResource("RectangleShape2D_a7cml")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/ataque_esquerda/area_ataque"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/punch_attack/attack_left"]
 visible = false
 sprite_frames = SubResource("SpriteFrames_ta5kv")
+
+[node name="attack_down" type="CollisionShape2D" parent="CharacterBody2D/punch_attack"]
+position = Vector2(0, 19)
+shape = SubResource("RectangleShape2D_a7cml")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/punch_attack/attack_down"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_uqvot")
+frame_progress = 0.175964
 
 [node name="Sound" type="Node2D" parent="CharacterBody2D"]
 
@@ -444,3 +447,34 @@ stream = ExtResource("64_puptu")
 [node name="Summon" type="AudioStreamPlayer2D" parent="CharacterBody2D/Sound"]
 stream = ExtResource("65_27gp2")
 pitch_scale = 2.5
+
+[node name="detection" type="Area2D" parent="CharacterBody2D"]
+visible = false
+collision_layer = 2
+collision_mask = 2
+
+[node name="detection_area" type="CollisionShape2D" parent="CharacterBody2D/detection"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_bcl1y")
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+
+[node name="right_area" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(20.5, -0.5)
+shape = SubResource("RectangleShape2D_7hhcu")
+
+[node name="left_area" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(-20.5, -1)
+shape = SubResource("RectangleShape2D_7hhcu")
+
+[node name="down_area" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(0, 19)
+shape = SubResource("RectangleShape2D_7hhcu")
+
+[node name="up_area" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(0, -26)
+shape = SubResource("RectangleShape2D_7hhcu")
+
+[connection signal="body_entered" from="CharacterBody2D/detection" to="CharacterBody2D" method="_on_detection_body_entered"]
+[connection signal="body_entered" from="CharacterBody2D/detection" to="CharacterBody2D" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="CharacterBody2D/detection" to="CharacterBody2D" method="_on_area_2d_body_exited"]

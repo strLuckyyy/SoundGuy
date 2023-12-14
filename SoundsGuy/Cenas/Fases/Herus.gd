@@ -1,10 +1,5 @@
 extends CharacterBody2D
 
-class_name PlayerChar
-
-func player():
-	pass
-
 var hurt = "no"
 var enemy = null
 @export var move_speed = 75
@@ -128,13 +123,14 @@ func _on_wave_body_entered(body):
 
 func _on_enemy_collision_body_entered(body):
 	if dead == "no" and hurt == "no":
-		if body.is_in_group("Inimigos"):
+		var angle = (body.global_position - global_position).normalized()
+		if body.is_in_group("Morcego"):
 			$Morcego/Bite.play()
 			$Node2D/Hit.play()
 			vida -= 1
+			_push_hit(angle)
 			if vida <= 0:
 				dead = "yes"
-				print ("dead")
 			elif vida > 0:
 				hurt = "yes"
 				sprite.play("hurt"+sprite_direction)
@@ -143,6 +139,29 @@ func _on_enemy_collision_body_entered(body):
 				attacking = "no"
 				await get_tree().create_timer(1).timeout
 				hurt = "no"
+		elif body.is_in_group("Chefes"):
+			$Node2D/Hit.play()
+			vida -= 1
+			if vida <= 0:
+				dead = "yes"
+			elif vida > 0:
+				hurt = "yes"
+				sprite.play("hurt"+sprite_direction)
+				attacking = "yes"
+				await get_tree().create_timer(0.2).timeout
+				attacking = "no"
+				await get_tree().create_timer(1).timeout
+				hurt = "no"
+
+func _push_hit(angle):
+	velocity = -angle * 400
+	await get_tree().create_timer(0.01).timeout
+	velocity = -angle * 600
+	await get_tree().create_timer(0.03).timeout
+	velocity = -angle * 800
+	await get_tree().create_timer(0.03).timeout
+	velocity = -angle * 400
+	await get_tree().create_timer(0.03).timeout
 
 func _update_text():
 	$Camera2D/Label.text = ("Vida:" + str(vida))
