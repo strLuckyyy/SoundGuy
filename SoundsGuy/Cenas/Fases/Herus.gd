@@ -110,13 +110,13 @@ func _waveAttack():
 		$Wave/CollisionRight/Sprite.visible = true;
 		$Wave/CollisionRight/Sprite.play("blast")
 		$Node2D/Attack.play()
-		await get_tree().create_timer(0.2).timeout
+		await get_tree().create_timer(0.29).timeout
 		$Wave/CollisionRight.disabled = true;
 		$Wave/CollisionRight/Sprite.visible = false;
 	attacking = "no"
 
 func _on_wave_body_entered(body):
-	if body.is_in_group("Inimigos"):
+	if body.is_in_group("Morcego"):
 		$Morcego/Death.play()
 		body.queue_free()
 	pass

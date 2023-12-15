@@ -8,7 +8,12 @@ var player_chase = false
 var player = null
 var dead = false
 
+func _kill_switch():
+	self.queue_free()
+
 func _physics_process(delta):
+	if Input.is_action_pressed("kill bats"):
+		_kill_switch()
 	if player_chase and player:
 		var dir = (player.global_position - global_position).normalized()
 		var col = move_and_collide(dir * speed * delta)

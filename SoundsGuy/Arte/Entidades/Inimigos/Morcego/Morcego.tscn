@@ -53,7 +53,7 @@ radius = 89.0225
 
 [node name="Morcego" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Inimigos"]]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Morcego"]]
 collision_layer = 2
 collision_mask = 2
 up_direction = Vector2(0, 1)

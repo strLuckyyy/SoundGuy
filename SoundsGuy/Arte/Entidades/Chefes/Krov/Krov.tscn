@@ -382,7 +382,6 @@ scale = Vector2(2, 2)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Chefes"]]
 collision_layer = 3
-collision_mask = 2
 script = ExtResource("1_5lrq6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
@@ -392,7 +391,7 @@ shape = SubResource("RectangleShape2D_ksmal")
 sprite_frames = SubResource("SpriteFrames_n1jk6")
 animation = &"idleDown"
 autoplay = "idleDown"
-frame_progress = 0.460124
+frame_progress = 0.123159
 
 [node name="punch_attack" type="Area2D" parent="CharacterBody2D"]
 visible = false
@@ -457,24 +456,37 @@ collision_mask = 2
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_bcl1y")
 
-[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+[node name="right_area" type="Area2D" parent="CharacterBody2D"]
 
-[node name="right_area" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+[node name="right_area" type="CollisionShape2D" parent="CharacterBody2D/right_area"]
 position = Vector2(20.5, -0.5)
 shape = SubResource("RectangleShape2D_7hhcu")
+disabled = true
 
-[node name="left_area" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+[node name="left_area" type="Area2D" parent="CharacterBody2D"]
+
+[node name="left_area" type="CollisionShape2D" parent="CharacterBody2D/left_area"]
 position = Vector2(-20.5, -1)
 shape = SubResource("RectangleShape2D_7hhcu")
+disabled = true
 
-[node name="down_area" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+[node name="down_area" type="Area2D" parent="CharacterBody2D"]
+
+[node name="down_area" type="CollisionShape2D" parent="CharacterBody2D/down_area"]
 position = Vector2(0, 19)
 shape = SubResource("RectangleShape2D_7hhcu")
+disabled = true
 
-[node name="up_area" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+[node name="up_area" type="Area2D" parent="CharacterBody2D"]
+
+[node name="up_area" type="CollisionShape2D" parent="CharacterBody2D/up_area"]
 position = Vector2(0, -26)
 shape = SubResource("RectangleShape2D_7hhcu")
+disabled = true
 
 [connection signal="body_entered" from="CharacterBody2D/detection" to="CharacterBody2D" method="_on_detection_body_entered"]
-[connection signal="body_entered" from="CharacterBody2D/detection" to="CharacterBody2D" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="CharacterBody2D/detection" to="CharacterBody2D" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="CharacterBody2D/right_area" to="CharacterBody2D" method="_on_right_area_body_entered"]
+[connection signal="body_entered" from="CharacterBody2D/left_area" to="CharacterBody2D" method="_on_left_area_body_entered"]
+[connection signal="body_entered" from="CharacterBody2D/down_area" to="CharacterBody2D" method="_on_down_area_body_entered"]
+[connection signal="body_entered" from="CharacterBody2D/up_area" to="CharacterBody2D" method="_on_up_area_body_entered"]
