@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
-@onready var sprite = get_node("CollisionShape2D/AnimatedSprite2D")
+class_name Boss
+
+@onready var sprite = get_node("CollisionShape2D/Vampiro")
 
 var sprite_direction = "Down"
 var speed = 38

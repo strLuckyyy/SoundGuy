@@ -1,0 +1,440 @@
+[gd_scene load_steps=65 format=3 uid="uid://ohthckry0kka"]
+
+[ext_resource type="Script" path="res://Arte/Entidades/Inimigos/Morcego/enemyCollision.gd" id="1_hyk7e"]
+[ext_resource type="Script" path="res://Scripts/Entidades/Inimigos/Morcego Scripts/ceifador.gd" id="1_p2mjy"]
+[ext_resource type="Texture2D" uid="uid://d1oyh4khu45ix" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase9.png" id="2_3jv7u"]
+[ext_resource type="Texture2D" uid="uid://khrdr0cmvooh" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase10.png" id="3_u10qk"]
+[ext_resource type="Texture2D" uid="uid://cbrewqmxqec18" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase11.png" id="4_th2sr"]
+[ext_resource type="Texture2D" uid="uid://dpnb4n3uvswf7" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase12.png" id="5_qttvy"]
+[ext_resource type="Texture2D" uid="uid://3m6nmblijm56" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase23.png" id="6_fk3t8"]
+[ext_resource type="Texture2D" uid="uid://yg247b6acegi" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase24.png" id="7_bra7p"]
+[ext_resource type="Texture2D" uid="uid://buptq368rp5sk" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase25.png" id="8_mhdj1"]
+[ext_resource type="Texture2D" uid="uid://71fd3s1ojagn" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase26.png" id="9_igp83"]
+[ext_resource type="Texture2D" uid="uid://c12s6dlqqqs4l" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase39.png" id="10_8ibar"]
+[ext_resource type="Texture2D" uid="uid://b8a2wot45apj" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase40.png" id="11_1sqfv"]
+[ext_resource type="Texture2D" uid="uid://dbai8y62ncyhs" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase41.png" id="12_umcuf"]
+[ext_resource type="Texture2D" uid="uid://b0orta1s78hts" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase42.png" id="13_lx2eg"]
+[ext_resource type="Texture2D" uid="uid://d4e3wku5tbaqb" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase43.png" id="14_6dyp2"]
+[ext_resource type="Texture2D" uid="uid://chu81vda3k724" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase44.png" id="15_h7d6u"]
+[ext_resource type="Texture2D" uid="uid://l8cf0eghkc5w" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase45.png" id="16_2an47"]
+[ext_resource type="Texture2D" uid="uid://d3cx5ujxfdkfe" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase46.png" id="17_vup0y"]
+[ext_resource type="Texture2D" uid="uid://dm30lh5jb2kbn" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase59.png" id="18_4dask"]
+[ext_resource type="Texture2D" uid="uid://dlhvgoi274yl8" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase60.png" id="19_cfq3p"]
+[ext_resource type="Texture2D" uid="uid://domvbc760wvf3" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase61.png" id="20_8jqyn"]
+[ext_resource type="Texture2D" uid="uid://cq7e5uk6y5i3i" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase62.png" id="21_5pg0m"]
+[ext_resource type="Texture2D" uid="uid://dp3pe51d53kfg" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase63.png" id="22_n8mvx"]
+[ext_resource type="Texture2D" uid="uid://254slknn1h1q" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase64.png" id="23_ggy51"]
+[ext_resource type="Texture2D" uid="uid://ok0r6efu0ev1" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase1.png" id="24_j7nul"]
+[ext_resource type="Texture2D" uid="uid://dag35t1hh4lvt" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase47.png" id="25_7i4qo"]
+[ext_resource type="Texture2D" uid="uid://b3g74wd8vrtqp" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase2.png" id="25_sab0p"]
+[ext_resource type="Texture2D" uid="uid://cbaedsped5pp8" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase3.png" id="26_l6a25"]
+[ext_resource type="Texture2D" uid="uid://d4evcobs0yrch" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase48.png" id="26_nuibt"]
+[ext_resource type="Texture2D" uid="uid://cdmfof3x0utyl" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase4.png" id="27_hrt5i"]
+[ext_resource type="Texture2D" uid="uid://80613kton0kg" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase49.png" id="27_xydui"]
+[ext_resource type="Texture2D" uid="uid://dblusvn8y68b0" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase5.png" id="28_d3od7"]
+[ext_resource type="Texture2D" uid="uid://cxpidmwnp3kpe" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase50.png" id="28_nsmom"]
+[ext_resource type="Texture2D" uid="uid://bdc11caj0o45i" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase6.png" id="29_48bsc"]
+[ext_resource type="Texture2D" uid="uid://bfg4tk15sai2g" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase51.png" id="29_k5csu"]
+[ext_resource type="Texture2D" uid="uid://bynxej5l63d8d" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase52.png" id="30_c12ym"]
+[ext_resource type="Texture2D" uid="uid://bcmf7n0vgbch8" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase27.png" id="30_te844"]
+[ext_resource type="Texture2D" uid="uid://c4ijg0iiynkyy" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase29.png" id="31_5alto"]
+[ext_resource type="Texture2D" uid="uid://cfvirqe66qsia" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase53.png" id="31_lrg62"]
+[ext_resource type="Texture2D" uid="uid://cqxnpvhn1xqdl" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase31.png" id="32_4g4or"]
+[ext_resource type="Texture2D" uid="uid://u7kn3qgl6vo6" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase54.png" id="32_g1b6f"]
+[ext_resource type="Texture2D" uid="uid://b36ulirege213" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase55.png" id="33_aqf4e"]
+[ext_resource type="Texture2D" uid="uid://dl2bknq3vkwdn" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase33.png" id="33_cgbt6"]
+[ext_resource type="Texture2D" uid="uid://djgupcpgwvhb8" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase36.png" id="34_gta8n"]
+[ext_resource type="Texture2D" uid="uid://cjh4q6d8bvomk" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase56.png" id="34_rcj4m"]
+[ext_resource type="Texture2D" uid="uid://h85jyvbifhqo" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase57.png" id="35_i30ry"]
+[ext_resource type="Texture2D" uid="uid://b60gip7osh753" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase38.png" id="35_orp75"]
+[ext_resource type="Texture2D" uid="uid://d2q0yjjeofjqa" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase7.png" id="36_lulaq"]
+[ext_resource type="Texture2D" uid="uid://r0qspcqrjmeh" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase58.png" id="36_y3blw"]
+[ext_resource type="Texture2D" uid="uid://beown7qkxilk" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase8.png" id="37_kohqm"]
+[ext_resource type="Texture2D" uid="uid://bvkc8rignk28i" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase28.png" id="38_jjlm7"]
+[ext_resource type="Texture2D" uid="uid://dpa2gfgqv2oln" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase30.png" id="39_2i6l6"]
+[ext_resource type="Texture2D" uid="uid://535rsf84nl80" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase32.png" id="40_8v13w"]
+[ext_resource type="Texture2D" uid="uid://7uu7i04hk21k" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase34.png" id="41_ymjdh"]
+[ext_resource type="Texture2D" uid="uid://cnft0iplp515r" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase35.png" id="42_euwnc"]
+[ext_resource type="Texture2D" uid="uid://njvn3w3qxus1" path="res://Arte/Entidades/Inimigos/Ceifeiro/AseSprite/Ceifeiro.ase37.png" id="43_8ylqv"]
+[ext_resource type="AudioStream" uid="uid://j41dq5u0tcox" path="res://Sons/giant4.wav" id="44_vxbnl"]
+[ext_resource type="AudioStream" uid="uid://bh4te2rjatn77" path="res://Sons/firemagic.wav" id="45_vspaj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_etj53"]
+size = Vector2(18, 19.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bocme"]
+size = Vector2(22, 29.5)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v1r0n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3jv7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u10qk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u10qk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u10qk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_th2sr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_th2sr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qttvy")
+}],
+"loop": false,
+"name": &"attackDown",
+"speed": 13.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_fk3t8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bra7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bra7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bra7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mhdj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mhdj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_igp83")
+}],
+"loop": false,
+"name": &"attackLeft",
+"speed": 13.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_8ibar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1sqfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1sqfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1sqfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_umcuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_umcuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_lx2eg")
+}],
+"loop": false,
+"name": &"attackRight",
+"speed": 13.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_6dyp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_h7d6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_h7d6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2an47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_vup0y")
+}],
+"loop": false,
+"name": &"attackUp",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_4dask")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_cfq3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_8jqyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_5pg0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_n8mvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ggy51")
+}],
+"loop": false,
+"name": &"death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_7i4qo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_nuibt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_xydui")
+}],
+"loop": false,
+"name": &"hurtDown",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_nsmom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_k5csu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_c12ym")
+}],
+"loop": false,
+"name": &"hurtLeft",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_lrg62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_g1b6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_aqf4e")
+}],
+"loop": false,
+"name": &"hurtRight",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_rcj4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_i30ry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_y3blw")
+}],
+"loop": false,
+"name": &"hurtUp",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_j7nul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_sab0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_l6a25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_hrt5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_d3od7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_48bsc")
+}],
+"loop": true,
+"name": &"idleDown",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_te844")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_5alto")
+}],
+"loop": true,
+"name": &"idleLeft",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_4g4or")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_cgbt6")
+}],
+"loop": true,
+"name": &"idleRight",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_gta8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_orp75")
+}],
+"loop": true,
+"name": &"idleUp",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_48bsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_lulaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_kohqm")
+}],
+"loop": true,
+"name": &"walkDown",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_te844")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_jjlm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_5alto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_2i6l6")
+}],
+"loop": true,
+"name": &"walkLeft",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_4g4or")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_8v13w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_cgbt6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_ymjdh")
+}],
+"loop": true,
+"name": &"walkRight",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_euwnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_gta8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_8ylqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_orp75")
+}],
+"loop": true,
+"name": &"walkUp",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3ve0j"]
+radius = 89.0225
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l6ngq"]
+radius = 44.0114
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ga6l"]
+size = Vector2(30, 22)
+
+[node name="Ceifeiro" type="CharacterBody2D" groups=["Ceifeiro"]]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_p2mjy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -3.625)
+shape = SubResource("RectangleShape2D_etj53")
+
+[node name="reaperCollision" type="Area2D" parent="."]
+visible = false
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_hyk7e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="reaperCollision"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_bocme")
+
+[node name="Ceifeiro" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_v1r0n")
+animation = &"hurtDown"
+autoplay = "idleDown"
+frame = 2
+frame_progress = 1.0
+
+[node name="detectionArea" type="Area2D" parent="."]
+visible = false
+position = Vector2(0, -2)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detectionArea"]
+shape = SubResource("CircleShape2D_3ve0j")
+
+[node name="attackArea" type="Area2D" parent="."]
+position = Vector2(0, -2)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="attackArea"]
+shape = SubResource("CircleShape2D_l6ngq")
+
+[node name="Sounds" type="Node2D" parent="."]
+position = Vector2(0, -2)
+
+[node name="Giant" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("44_vxbnl")
+
+[node name="Fire_Magic" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("45_vspaj")
+
+[node name="attack" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_8ga6l")
+disabled = true
+
+[connection signal="body_entered" from="reaperCollision" to="reaperCollision" method="_on_body_entered"]
+[connection signal="body_entered" from="detectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="detectionArea" to="." method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="attackArea" to="." method="_on_attack_area_body_entered"]

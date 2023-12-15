@@ -1,53 +1,11 @@
-extends CharacterBody2D
+extends Node
 
-@onready var sprite = get_node("AnimatedSprite2D")
 
-var sprite_direction = "Down"
-var speed = 45
-var player_chase = false
-var player = null
-var dead = false
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
 
-func _kill_switch():
-	self.queue_free()
 
-func _physics_process(delta):
-	if Input.is_action_pressed("kill bats"):
-		_kill_switch()
-	if player_chase and player:
-		var dir = (player.global_position - global_position).normalized()
-		var col = move_and_collide(dir * speed * delta)
-		match dir:
-			Vector2.LEFT:
-				sprite_direction = "Left"
-				print('left')
-			Vector2.RIGHT:
-				sprite_direction = "Right"
-				print('right')
-			Vector2.UP:
-				sprite_direction = "Up"
-				print("up")
-			Vector2.DOWN:
-				sprite_direction = "Down"
-				print('down')
-	set_animation("move",sprite_direction)
-
-func _on_area_2d_body_entered(body):
-	if body.is_in_group("Herus"):
-		player = body
-		player_chase = true
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
 	pass
-
-func _on_area_2d_body_exited(player):
-	player = null
-	player_chase = false
-	pass
-
-func _die():
-	if dead == true:
-		sprite.play("death")
-		await get_tree().create_timer(0.3).timeout
-		self.queue_free()
-
-func set_animation(move,sprite_direction):
-	sprite.play(move+sprite_direction)
