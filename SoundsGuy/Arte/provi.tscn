@@ -1,0 +1,339 @@
+[gd_scene load_steps=57 format=3 uid="uid://dxe0o1n7ll43n"]
+
+[ext_resource type="Texture2D" uid="uid://b4spye3m5v6n8" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase1.png" id="1_h2sg7"]
+[ext_resource type="Texture2D" uid="uid://cmikpkxpu7ety" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase2.png" id="2_66j47"]
+[ext_resource type="Texture2D" uid="uid://dm7ol8wkejuw1" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase3.png" id="3_ycg4m"]
+[ext_resource type="Texture2D" uid="uid://d2k6c4w5ouq0e" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase4.png" id="4_kta2g"]
+[ext_resource type="Texture2D" uid="uid://ds8qx0yo0jdjs" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase40.png" id="5_uplmn"]
+[ext_resource type="Texture2D" uid="uid://cbnktm6hmjnvk" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase41.png" id="6_q7ghg"]
+[ext_resource type="Texture2D" uid="uid://cru0kld388s1e" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase42.png" id="7_53sy0"]
+[ext_resource type="Texture2D" uid="uid://f1t5twlupw51" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase43.png" id="8_nx7du"]
+[ext_resource type="Texture2D" uid="uid://ccc1auhpjvx7w" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase24.png" id="9_0uomq"]
+[ext_resource type="Texture2D" uid="uid://bn2uym4cvc171" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase25.png" id="10_w7his"]
+[ext_resource type="Texture2D" uid="uid://baj3lqhejn5vl" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase26.png" id="11_opodg"]
+[ext_resource type="Texture2D" uid="uid://bfl1iutirvjkf" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase34.png" id="12_1tepv"]
+[ext_resource type="Texture2D" uid="uid://dowaec8mye3di" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase35.png" id="13_1qatj"]
+[ext_resource type="Texture2D" uid="uid://byr28syyaiq32" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase36.png" id="14_orlcp"]
+[ext_resource type="Texture2D" uid="uid://dg6f4nau2jovu" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase14.png" id="15_2gdas"]
+[ext_resource type="Texture2D" uid="uid://bj8boam7ucylg" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase15.png" id="16_plmh8"]
+[ext_resource type="Texture2D" uid="uid://dvachjm33gqxp" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase16.png" id="17_yoh0p"]
+[ext_resource type="Texture2D" uid="uid://cmyxp6ovgy271" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase58.png" id="18_d8uu3"]
+[ext_resource type="Texture2D" uid="uid://bd3lpeolmaxub" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase59.png" id="19_72ph8"]
+[ext_resource type="Texture2D" uid="uid://da4807glpmvtg" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase60.png" id="20_1ae7r"]
+[ext_resource type="Texture2D" uid="uid://cfbsgn1t1b4yx" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase61.png" id="21_4cy2o"]
+[ext_resource type="Texture2D" uid="uid://71ub2u7g6qgt" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase62.png" id="22_m31no"]
+[ext_resource type="Texture2D" uid="uid://d3y5d8tglig8b" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase63.png" id="23_32aqq"]
+[ext_resource type="Texture2D" uid="uid://c7panvm7b1ggm" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase48.png" id="24_c5slw"]
+[ext_resource type="Texture2D" uid="uid://bnht5mmyuxbxc" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase49.png" id="25_1nsc5"]
+[ext_resource type="Texture2D" uid="uid://bbno6sqh0au57" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase50.png" id="26_r3ovx"]
+[ext_resource type="Texture2D" uid="uid://xvoyhbvn6gdh" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase51.png" id="27_kpdmw"]
+[ext_resource type="Texture2D" uid="uid://cn7kiccweu5qs" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase52.png" id="28_hmgyx"]
+[ext_resource type="Texture2D" uid="uid://c2av8tq3fuxy3" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase53.png" id="29_jqj61"]
+[ext_resource type="Texture2D" uid="uid://c81c48v54e3bi" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase54.png" id="30_tgaov"]
+[ext_resource type="Texture2D" uid="uid://cam31o4x1kfvx" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase55.png" id="31_jodpc"]
+[ext_resource type="Texture2D" uid="uid://cpbo7ygkhkarf" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase56.png" id="32_x8u6f"]
+[ext_resource type="Texture2D" uid="uid://ce38jrdxwh75p" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase57.png" id="33_mxot3"]
+[ext_resource type="Texture2D" uid="uid://br2ywbmv55066" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase6.png" id="34_vtd7d"]
+[ext_resource type="Texture2D" uid="uid://cgp2esw20oly5" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase7.png" id="35_l0i1v"]
+[ext_resource type="Texture2D" uid="uid://cpuj8dd3lct4l" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase8.png" id="36_pus5h"]
+[ext_resource type="Texture2D" uid="uid://d4kvmeixmhwtx" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase9.png" id="37_yxbnl"]
+[ext_resource type="Texture2D" uid="uid://v2x13xje2e1m" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase20.png" id="38_sa47x"]
+[ext_resource type="Texture2D" uid="uid://s2qe0wt3j0xl" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase21.png" id="39_5723u"]
+[ext_resource type="Texture2D" uid="uid://ciuxcs6vcgu8h" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase22.png" id="40_wtutt"]
+[ext_resource type="Texture2D" uid="uid://cl2tl6v1ijca7" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase23.png" id="41_3doun"]
+[ext_resource type="Texture2D" uid="uid://dt8cye2k6dc0a" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase30.png" id="42_h4ssp"]
+[ext_resource type="Texture2D" uid="uid://1g56f551mv2c" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase31.png" id="43_xw1pb"]
+[ext_resource type="Texture2D" uid="uid://df0tmdv75hpb2" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase32.png" id="44_hjrm8"]
+[ext_resource type="Texture2D" uid="uid://cx7c6wudjoqk3" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase33.png" id="45_kmbh7"]
+[ext_resource type="Texture2D" uid="uid://c1apxxg05x6tl" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase10.png" id="46_xr0fn"]
+[ext_resource type="Texture2D" uid="uid://162kcnqr2h5t" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase11.png" id="47_abh1v"]
+[ext_resource type="Texture2D" uid="uid://b63o1hol2mhye" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase12.png" id="48_jpbyo"]
+[ext_resource type="Texture2D" uid="uid://c3cke0v66vm2g" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.ase13.png" id="49_4omal"]
+[ext_resource type="Texture2D" uid="uid://c5irbo1g216m7" path="res://Arte/Entidades/Inimigos/Morcego/AseImporter/Morcego.ase1.png" id="50_0knck"]
+[ext_resource type="Texture2D" uid="uid://o3d61d8iluw7" path="res://Arte/Entidades/Inimigos/Morcego/AseImporter/Morcego.ase2.png" id="51_3f3et"]
+[ext_resource type="Texture2D" uid="uid://b7dtqks3qmuol" path="res://Arte/Entidades/Inimigos/Morcego/AseImporter/Morcego.ase3.png" id="52_g8thl"]
+[ext_resource type="Texture2D" uid="uid://cddxt5knhb0bp" path="res://Arte/Entidades/Inimigos/Morcego/AseImporter/Morcego.ase4.png" id="53_mykhe"]
+[ext_resource type="Texture2D" uid="uid://c6i882ii3s33l" path="res://Arte/Entidades/Inimigos/Morcego/AseImporter/Morcego.ase5.png" id="54_7fw5a"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vhiiv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_h2sg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_66j47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ycg4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kta2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_h2sg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_66j47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_h2sg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_h2sg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_h2sg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_66j47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kta2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kta2g")
+}],
+"loop": true,
+"name": &"idleDown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_uplmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q7ghg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_53sy0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nx7du")
+}],
+"loop": true,
+"name": &"punchDown",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_0uomq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_w7his")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_opodg")
+}],
+"loop": true,
+"name": &"punchLeft",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_1tepv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_1qatj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_orlcp")
+}],
+"loop": true,
+"name": &"punchRight",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_2gdas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_plmh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_yoh0p")
+}],
+"loop": true,
+"name": &"punchUp",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_d8uu3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_72ph8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1ae7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_4cy2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_m31no")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_32aqq")
+}],
+"loop": false,
+"name": &"tp_in",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_c5slw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_1nsc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_r3ovx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_kpdmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_hmgyx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_jqj61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_tgaov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_jodpc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_x8u6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_mxot3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_d8uu3")
+}],
+"loop": false,
+"name": &"tp_out",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_vtd7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_l0i1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_pus5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_yxbnl")
+}],
+"loop": true,
+"name": &"walkDown",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_sa47x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_5723u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_wtutt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_3doun")
+}],
+"loop": true,
+"name": &"walkLeft",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_h4ssp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_xw1pb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_hjrm8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_kmbh7")
+}],
+"loop": true,
+"name": &"walkRight",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("46_xr0fn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_abh1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_jpbyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_4omal")
+}],
+"loop": true,
+"name": &"walkUp",
+"speed": 7.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lc1n8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("50_0knck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_3f3et")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_g8thl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_mykhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_7fw5a")
+}],
+"loop": true,
+"name": &"moveDown",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"moveLeft",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"moveRight",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"moveUp",
+"speed": 5.0
+}]
+
+[node name="provi" type="Node2D"]
+
+[node name="Krov" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vhiiv")
+animation = &"idleDown"
+autoplay = "idleDown"
+
+[node name="Bat" type="AnimatedSprite2D" parent="."]
+light_mask = 8
+visibility_layer = 8
+sprite_frames = SubResource("SpriteFrames_lc1n8")
+animation = &"moveDown"

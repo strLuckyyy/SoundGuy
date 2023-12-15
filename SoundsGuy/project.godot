@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.1", "Mobile")
 
 [aseprite_importers]
 
-aseprite_executable_path="\"C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\LibreSprite\\libresprite.exe\""
+aseprite_executable_path="C:\\Users\\abraa\\Downloads\\LibreSprite-Windows-x86_64\\libresprite.exe"
 
 [display]
 

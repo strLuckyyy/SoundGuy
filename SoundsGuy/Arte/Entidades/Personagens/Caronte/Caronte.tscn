@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpm8e6mvdtxmt"]
+
+[ext_resource type="Texture2D" uid="uid://d3g6mrr40yjun" path="res://Arte/Entidades/Personagens/Caronte/Asesprite/Caronte.png" id="1_vfevs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4fax"]
+atlas = ExtResource("1_vfevs")
+region = Rect2(0, 0, 20, 31)
+margin = Rect2(8, 1, 12, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7chaq"]
+animations = [{
+"frames": [{
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_o4fax")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="Caronte" type="Node2D"]
+
+[node name="Caronte" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7chaq")
