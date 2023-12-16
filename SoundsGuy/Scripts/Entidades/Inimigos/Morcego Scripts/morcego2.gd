@@ -60,9 +60,7 @@ func get_angle(dir: Vector2) -> int:
 	return 3
 
 func _on_detection_area_body_entered(body):
-	print("detect")
 	if body.is_in_group("Herus"):
-		print("enemy")
 		player = body
 		player_chase = true
 	pass
@@ -90,10 +88,8 @@ func die():
 	dead = true
 	sprite.stop()
 	sprite.play("death")
-	print("dead")
 	$Sounds/Death.play()
 	await get_tree().create_timer(0.3).timeout
-	print("dead2")
 	queue_free()
 
 func apply_damage(damage):

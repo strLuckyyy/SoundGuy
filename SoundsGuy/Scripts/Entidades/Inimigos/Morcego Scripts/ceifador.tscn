@@ -396,9 +396,9 @@ shape = SubResource("RectangleShape2D_bocme")
 
 [node name="Ceifeiro" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_v1r0n")
-animation = &"hurtDown"
+animation = &"death"
 autoplay = "idleDown"
-frame = 2
+frame = 5
 frame_progress = 1.0
 
 [node name="detectionArea" type="Area2D" parent="."]

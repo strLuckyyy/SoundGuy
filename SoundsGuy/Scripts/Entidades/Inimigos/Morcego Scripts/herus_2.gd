@@ -22,6 +22,7 @@ func _physics_process(_delta):
 	_update_text()
 	if end == true:
 		sprite.play("dead")
+		$EnemyCollision/EnemyCollision.disabled = true
 		if Input.is_action_just_pressed("attack"):
 			get_tree().reload_current_scene()
 	elif dead == false:

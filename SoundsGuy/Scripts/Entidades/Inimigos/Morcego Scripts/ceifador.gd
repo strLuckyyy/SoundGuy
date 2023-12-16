@@ -17,19 +17,21 @@ var health = 4
 var hurt = false
 
 func _physics_process(delta):
-	if Input.is_action_pressed("kill reaper"):
-		die()
-	if player_chase and player and dead == false and attacking == false and hurt== false:
-		var dir = (player.global_position - global_position).normalized()
-		var col = move_and_collide(dir * speed * delta)
-		angle = dir.normalized().snapped(Vector2.ONE)
-		var value = get_angle(angle)
-		sprite_direction = get_direction(value)
-		out_dir = dir
-		delta_out = delta
-		set_animation("move")
-	else:
-		set_animation("idle")
+	if dead == false:
+		if Input.is_action_pressed("kill reaper"):
+			die()
+			await get_tree().create_timer(1).timeout
+		if player_chase and player and dead == false and hurt== false:
+			var dir = (player.global_position - global_position).normalized()
+			var col = move_and_collide(dir * speed * delta)
+			angle = dir.normalized().snapped(Vector2.ONE)
+			var value = get_angle(angle)
+			sprite_direction = get_direction(value)
+			out_dir = dir
+			delta_out = delta
+			set_animation("walk")
+		else:
+			set_animation("idle")
 
 func get_direction(angle):
 	if angle == 0:
@@ -62,9 +64,7 @@ func get_angle(dir: Vector2) -> int:
 	return 3
 
 func _on_detection_area_body_entered(body):
-	print("detect")
 	if body.is_in_group("Herus"):
-		print("enemy")
 		player = body
 		player_chase = true
 	pass
@@ -75,21 +75,27 @@ func _on_detection_area_body_exited(player):
 	pass
 
 func set_animation(move):
-	sprite.play(move+sprite_direction)
+	if attacking == false:
+		sprite.play(move+sprite_direction)
+	else:
+		pass
 
 func attack():
 	speed = 55
 	set_animation("attack")
 	$attack/CollisionShape2D.disabled = false
+	attacking = true
 	await get_tree().create_timer(0.8).timeout
 	speed = 30
 	$attack/CollisionShape2D.disabled = true
+	attacking = false
 
 func _on_attack_area_body_entered(body):
 	if body == player:
 		attack() 
 
 func die():
+	dead = true
 	sprite.play("death")
 	await get_tree().create_timer(0.3).timeout
 	queue_free()
