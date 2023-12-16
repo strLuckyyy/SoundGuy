@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=3 uid="uid://bne7strr8m0v5"]
+[gd_scene load_steps=114 format=3 uid="uid://bne7strr8m0v5"]
 
 [ext_resource type="Script" path="res://Arte/Entidades/Chefes/Krov/Krov.gd" id="1_5lrq6"]
 [ext_resource type="Texture2D" uid="uid://dpe8bg3eiv01y" path="res://Arte/Entidades/Chefes/Krov/AseImporter/Vampiro.png" id="2_wxmau"]
@@ -28,87 +28,6 @@
 [ext_resource type="AudioStream" uid="uid://ddivim1efr40v" path="res://Sons/teleport-1.wav" id="63_e7ptp"]
 [ext_resource type="AudioStream" uid="uid://dswbk87pdb3xh" path="res://Sons/teleport-2.wav" id="64_puptu"]
 [ext_resource type="AudioStream" uid="uid://bh4te2rjatn77" path="res://Sons/firemagic.wav" id="65_27gp2"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgq2c"]
-size = Vector2(20, 32)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7cml"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_1auxt"]
-animations = [{
-"frames": [{
-"duration": 0.1,
-"texture": ExtResource("50_aw2qm")
-}, {
-"duration": 0.1,
-"texture": ExtResource("51_ojd6s")
-}, {
-"duration": 0.1,
-"texture": ExtResource("52_gxglc")
-}],
-"loop": true,
-"name": &"default",
-"speed": 1.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_31cq2"]
-size = Vector2(23, 20)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_xf08x"]
-animations = [{
-"frames": [{
-"duration": 0.1,
-"texture": ExtResource("56_0tftj")
-}, {
-"duration": 0.1,
-"texture": ExtResource("57_kycn5")
-}, {
-"duration": 0.1,
-"texture": ExtResource("58_wgrfj")
-}],
-"loop": true,
-"name": &"default",
-"speed": 1.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ta5kv"]
-animations = [{
-"frames": [{
-"duration": 0.1,
-"texture": ExtResource("59_oxrdd")
-}, {
-"duration": 0.1,
-"texture": ExtResource("60_uvspv")
-}, {
-"duration": 0.1,
-"texture": ExtResource("61_cfn8o")
-}],
-"loop": true,
-"name": &"default",
-"speed": 1.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_uqvot"]
-animations = [{
-"frames": [{
-"duration": 0.1,
-"texture": ExtResource("53_w7j4r")
-}, {
-"duration": 0.1,
-"texture": ExtResource("54_543nt")
-}, {
-"duration": 0.1,
-"texture": ExtResource("55_emyk8")
-}],
-"loop": true,
-"name": &"default",
-"speed": 1.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcl1y"]
-size = Vector2(631, 317.75)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hhcu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y0usc"]
 atlas = ExtResource("2_wxmau")
@@ -219,11 +138,6 @@ margin = Rect2(10, 17, 16, 17)
 atlas = ExtResource("2_wxmau")
 region = Rect2(67, 177, 10, 9)
 margin = Rect2(12, 23, 22, 23)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qlyhb"]
-atlas = ExtResource("2_wxmau")
-region = Rect2(140, 64, 28, 32)
-margin = Rect2(2, 0, 4, 0)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6bjmm"]
 atlas = ExtResource("2_wxmau")
@@ -552,39 +466,36 @@ animations = [{
 "speed": 1.0
 }, {
 "frames": [{
-"duration": 0.1,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_qmfcq")
 }, {
-"duration": 0.1,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_3lann")
 }, {
-"duration": 0.1,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_veani")
 }, {
-"duration": 0.1,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_eiyyt")
 }, {
-"duration": 0.1,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_11wlr")
 }, {
-"duration": 0.1,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_num0r")
 }, {
-"duration": 0.1,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_7s8f5")
 }, {
-"duration": 0.1,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_0ixfk")
 }, {
-"duration": 0.1,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_kh4wo")
-}, {
-"duration": 0.12,
-"texture": SubResource("AtlasTexture_qlyhb")
 }],
 "loop": false,
 "name": &"death",
-"speed": 1.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 0.12,
@@ -876,6 +787,86 @@ animations = [{
 "speed": 4.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgq2c"]
+size = Vector2(18.6667, 22.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7cml"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1auxt"]
+animations = [{
+"frames": [{
+"duration": 0.1,
+"texture": ExtResource("50_aw2qm")
+}, {
+"duration": 0.1,
+"texture": ExtResource("51_ojd6s")
+}, {
+"duration": 0.1,
+"texture": ExtResource("52_gxglc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_31cq2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xf08x"]
+animations = [{
+"frames": [{
+"duration": 0.1,
+"texture": ExtResource("56_0tftj")
+}, {
+"duration": 0.1,
+"texture": ExtResource("57_kycn5")
+}, {
+"duration": 0.1,
+"texture": ExtResource("58_wgrfj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ta5kv"]
+animations = [{
+"frames": [{
+"duration": 0.1,
+"texture": ExtResource("59_oxrdd")
+}, {
+"duration": 0.1,
+"texture": ExtResource("60_uvspv")
+}, {
+"duration": 0.1,
+"texture": ExtResource("61_cfn8o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uqvot"]
+animations = [{
+"frames": [{
+"duration": 0.1,
+"texture": ExtResource("53_w7j4r")
+}, {
+"duration": 0.1,
+"texture": ExtResource("54_543nt")
+}, {
+"duration": 0.1,
+"texture": ExtResource("55_emyk8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcl1y"]
+size = Vector2(631, 317.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hhcu"]
+
 [node name="Krov" type="Node2D"]
 scale = Vector2(2, 2)
 
@@ -884,14 +875,19 @@ collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_5lrq6")
 
+[node name="Vampiro" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_1505a")
+animation = &"laugh"
+autoplay = "idleDown"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 0.5)
 scale = Vector2(0.75, 1)
 shape = SubResource("RectangleShape2D_fgq2c")
 
-[node name="punch_attack" type="Area2D" parent="CharacterBody2D"]
+[node name="punch_attack" type="Area2D" parent="CharacterBody2D" groups=["Blast"]]
 
 [node name="attack_right" type="CollisionShape2D" parent="CharacterBody2D/punch_attack"]
-visible = false
 position = Vector2(21, -0.5)
 shape = SubResource("RectangleShape2D_a7cml")
 disabled = true
@@ -903,8 +899,7 @@ sprite_frames = SubResource("SpriteFrames_1auxt")
 frame_progress = 0.848836
 
 [node name="attack_up" type="CollisionShape2D" parent="CharacterBody2D/punch_attack"]
-visible = false
-position = Vector2(1.5, -27)
+position = Vector2(0, -27)
 shape = SubResource("RectangleShape2D_31cq2")
 disabled = true
 
@@ -915,7 +910,6 @@ sprite_frames = SubResource("SpriteFrames_xf08x")
 frame_progress = 0.0544105
 
 [node name="attack_left" type="CollisionShape2D" parent="CharacterBody2D/punch_attack"]
-visible = false
 position = Vector2(-21, -1)
 shape = SubResource("RectangleShape2D_a7cml")
 disabled = true
@@ -926,7 +920,6 @@ sprite_frames = SubResource("SpriteFrames_ta5kv")
 frame_progress = 0.578489
 
 [node name="attack_down" type="CollisionShape2D" parent="CharacterBody2D/punch_attack"]
-visible = false
 position = Vector2(0, 19)
 shape = SubResource("RectangleShape2D_a7cml")
 disabled = true
@@ -989,11 +982,6 @@ collision_layer = 3
 [node name="up_area" type="CollisionShape2D" parent="CharacterBody2D/up_area"]
 position = Vector2(0, -27)
 shape = SubResource("RectangleShape2D_7hhcu")
-
-[node name="Vampiro" type="AnimatedSprite2D" parent="CharacterBody2D"]
-sprite_frames = SubResource("SpriteFrames_1505a")
-animation = &"walkUp"
-autoplay = "idleDown"
 
 [connection signal="body_entered" from="CharacterBody2D/detection" to="CharacterBody2D" method="_on_detection_body_entered"]
 [connection signal="body_exited" from="CharacterBody2D/detection" to="CharacterBody2D" method="_on_area_2d_body_exited"]

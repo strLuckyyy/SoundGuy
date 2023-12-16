@@ -15,13 +15,18 @@ var player = null
 var dead = false
 var attacking = "no"
 var angle = 0
-
+var health = 6
+var hurt = false
 
 func die():
-	pass
+	dead = true
+	sprite.stop()
+	sprite.play("death")
+	await get_tree().create_timer(1.6).timeout
+	queue_free()
 
 func _physics_process(delta):
-	if attacking == "no":
+	if attacking == "no" and hurt == false and dead == false:
 		if Input.is_action_pressed("kill vamp"):
 			die()
 		if player_chase == true:
@@ -75,54 +80,88 @@ func _on_detection_body_entered(body):
 
 func _on_right_area_body_entered(body):
 	if attacking == "no":
-		print("right")
-		$right_area/right_area.disabled = false
+		attacking = "yes"
 		$punch_attack/attack_right.disabled = false
+		$punch_attack/attack_right.visible = true
 		$punch_attack/attack_right/AnimatedSprite2D.visible = true
 		projectileRight.play("default")
 		punch_attack()
+		await get_tree().create_timer(0.3).timeout
+		projectileRight.stop()
 		$punch_attack/attack_right.disabled = false
+		$punch_attack/attack_right.visible = false
 		$punch_attack/attack_right/AnimatedSprite2D.visible = true
-		$right_area/right_area.disabled = true
+		laugh()
+		attacking = "no"
 
 func _on_left_area_body_entered(body):
 	if attacking == "no":
-		$left_area/left_area.disabled = false
+		attacking = "yes"
 		$punch_attack/attack_left.disabled = false
+		$punch_attack/attack_left.visible = true
 		$punch_attack/attack_left/AnimatedSprite2D.visible = true
 		projectileLeft.play("default")
 		punch_attack()
+		await get_tree().create_timer(0.3).timeout
+		projectileLeft.stop()
 		$punch_attack/attack_left.disabled = false
+		$punch_attack/attack_left.visible = false
 		$punch_attack/attack_left/AnimatedSprite2D.visible = true
-		$left_area/left_area.disabled = true
+		laugh()
+		attacking = "no"
 
 func _on_down_area_body_entered(body):
 	if attacking == "no":
-		$down_area/down_area.disabled = false
+		attacking = "yes"
 		$punch_attack/attack_down.disabled = false
+		$punch_attack/attack_down.visible = true
 		$punch_attack/attack_down/AnimatedSprite2D.visible = true
 		projectileDown.play("default")
 		punch_attack()
+		await get_tree().create_timer(0.3).timeout
+		projectileDown.stop()
 		$punch_attack/attack_down.disabled = true
+		$punch_attack/attack_down.visible = false
 		$punch_attack/attack_down/AnimatedSprite2D.visible = false
-		$down_area/down_area.disabled = true
+		laugh()
+		attacking = "no"
 
 func _on_up_area_body_entered(body):
 	if attacking == "no":
-		$up_area/up_area.disabled = false
+		attacking = "yes"
 		$punch_attack/attack_up.disabled = false
+		$punch_attack/attack_up.visible = true
 		$punch_attack/attack_up/AnimatedSprite2D.visible = true
 		projectileUp.play("default")
 		punch_attack()
+		await get_tree().create_timer(0.3).timeout
+		projectileUp.stop()
 		$punch_attack/attack_up.disabled = true
+		$punch_attack/attack_up.visible = false
 		$punch_attack/attack_up/AnimatedSprite2D.visible = false
-		$up_area/up_area.disabled = true
+		laugh()
+		attacking = "no"
+
+func apply_damage(damage):
+	health -= damage
+	if health <= 0:
+		die()
+	else:
+		hurt = true
+		sprite.stop()
+		set_animation("dmg")
+		await get_tree().create_timer(0.3).timeout
+		hurt = false
 
 func punch_attack():
-	if attacking == "no":
-		attacking = "yes"
-		speed = 0
-		sprite.play("attack"+sprite_direction)
-		await get_tree().create_timer(0.3).timeout
-		speed = 38
-		attacking = "no"
+	speed = 0
+	sprite.play("attack"+sprite_direction)
+	speed = 38
+
+func laugh ():
+	attacking = "yes"
+	sprite.stop()
+	sprite.play("laugh")
+	$Sound/Laugh.play()
+	await get_tree().create_timer(1).timeout
+	attacking = "no"

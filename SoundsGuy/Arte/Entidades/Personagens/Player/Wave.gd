@@ -9,5 +9,5 @@ func _ready() -> void:
 func _on_body_entered(body:Node2D) -> void:
 	if body is Bat:
 		body.die()
-	elif body is Reaper:
+	elif body is Reaper or body is Boss:
 		body.apply_damage(wave_damage)

@@ -17,6 +17,7 @@ var attacking = "no"
 var dead = false
 var end = false
 var damage = 1
+var invincible = false
 
 func _physics_process(_delta):
 	_update_text()
@@ -121,11 +122,11 @@ func _waveAttack():
 	attacking = "no"
 
 func _on_enemy_collision_body_entered(body):
-	if dead == false and hurt == "no":
+	if dead == false and hurt == "no" and invincible == false:
 		var source = body
-		if source.is_in_group("Morcego") or source.is_in_group("Chefes") or source.is_in_group("Ceifeiro"):
+		if source.is_in_group("Morcego") or source.is_in_group("Chefes") or source.is_in_group("Ceifeiro") or source.is_in_group("Blast"):
 			apply_damage(damage,source)
-			
+
 func apply_damage(damage,source):
 	health -= damage
 	$Sounds/Hit.play()
@@ -155,3 +156,13 @@ func _push_hit(angle):
 func _update_text():
 	$Camera2D/Label.text = ("Vida:" + str(health))
 
+func invi():
+	if Input.is_action_pressed("Invincible"):
+		if invincible == false:
+			$EnemyCollision/EnemyCollision.disabled = true
+			$WorldCollision.disabled = true
+			invincible = true
+		else:
+			$EnemyCollision/EnemyCollision.disabled = false
+			$WorldCollision.disabled = false
+			invincible = false
