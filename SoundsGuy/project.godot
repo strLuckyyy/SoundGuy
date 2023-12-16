@@ -11,8 +11,10 @@ config_version=5
 [application]
 
 config/name="SoundsGuy"
-run/main_scene="res://Cenas/Fases/cena_teste.tscn"
+run/main_scene="res://Cenas/Fases/Fase_1_2oAndar.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
+run/max_fps=60
+config/icon="res://Icon_SoH.png"
 
 [aseprite_importers]
 
