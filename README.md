@@ -1,8 +1,7 @@
-# UNISINOS-TRABALHOS
+# Fundamentos de Jogos Digitais
+### 1º Semestre - 02/23
+  * **Matéria**: Fundamentos de Jogos Digitais
+  * **Professor**: 
+  * **Tecnologia**: GDScript
 
-<div align="center">
-  <h1>Criar um Jogo - Grau B Fundamentos de Jogos</h1>
-  <i>° Montar o GameDesign</i>
-  <br />
-  <i>° Apresentar sábado</i>
-</div>
+    -> Lucas Fraga, Abrahão Francis, Marcos Vinicius
